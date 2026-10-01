@@ -3,9 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="An interactive book that teaches Git and GitHub to people who build with AI, with a live practice terminal in every chapter.">
+<meta name="description" content="An interactive book that teaches Git and GitHub to people who build with AI, with a live practice terminal in every chapter. By Shri Ram, No Code with Shri.">
+<meta name="author" content="Shri Ram (No Code with Shri)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Git for Vibe Coders: an interactive book">
+<meta property="og:description" content="Learn Git and GitHub for building with AI. Short lessons, a live practice terminal and quizzes in every chapter. Free.">
+<meta property="og:url" content="https://YOUR-USERNAME.github.io/git-for-vibe-coders/">
+<meta property="og:image" content="https://YOUR-USERNAME.github.io/git-for-vibe-coders/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#d4481e">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Git for Vibe Coders</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 28 28%27%3E%3Crect width=%2728%27 height=%2728%27 rx=%277%27 fill=%27%23d4481e%27/%3E%3Ccircle cx=%279%27 cy=%278%27 r=%272.6%27 fill=%27white%27/%3E%3Ccircle cx=%279%27 cy=%2720%27 r=%272.6%27 fill=%27white%27/%3E%3Ccircle cx=%2719%27 cy=%2713%27 r=%272.6%27 fill=%27white%27/%3E%3Cpath d=%27M9 10.6v6.8M9 16c0-2.5 2-3 5-3h2.4%27 stroke=%27white%27 stroke-width=%272%27 fill=%27none%27/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
@@ -296,6 +307,57 @@ tbody th{font-weight:600}
   .q{padding:14px}
   .cta .btn{flex:1 1 100%;text-align:center}
 }
+.basics{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);margin:0 0 16px;max-width:none}
+.basics summary{cursor:pointer;padding:12px 16px;font:700 1rem/1.3 var(--f-display);list-style:none;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.basics summary::-webkit-details-marker{display:none}
+.basics summary::before{content:"▸";color:var(--accent);transition:transform .15s}
+.basics[open] summary::before{transform:rotate(90deg)}
+.basics summary span{font:500 .78rem/1 var(--f-body);color:var(--accent-ink);background:var(--accent-soft);padding:3px 8px;border-radius:99px}
+.bgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:18px;padding:0 16px 16px}
+.bgrid h4{font:700 .9rem/1.3 var(--f-display);margin:4px 0 8px}
+.bgrid ul{margin:0;padding-left:1.1em;font-size:.88rem}
+.bgrid li{margin:.3em 0}
+.bgrid .tbl{margin:0;font-size:.84rem}
+.bgrid td{padding:6px 8px}
+.bgrid td:first-child{width:44%}
+.bgrid td code{white-space:normal;word-break:break-word;background:var(--sunk);padding:.1em .35em;border-radius:4px}
+.bnote{font-size:.82rem;color:var(--muted);margin:0 0 8px}
+.mode{display:flex;gap:4px;padding:3px;background:var(--sunk);border-radius:8px;margin-top:12px}
+.mode button{flex:1;border:0;background:none;border-radius:6px;padding:6px 8px;font-size:.82rem;font-weight:600;color:var(--muted)}
+.mode button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.1)}
+.modehint{font-size:.78rem;color:var(--muted);margin:6px 2px 0;line-height:1.4}
+.gwhy{font-size:.84rem;color:var(--muted);margin:3px 0 0;line-height:1.45}
+.glab{font:600 .66rem/1 var(--f-body)!important;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.gsee{display:block;background:var(--good-soft);color:var(--ink)!important;border-radius:6px;padding:6px 8px;margin-top:2px}
+.gsee b{color:var(--good)}
+.mi.done .gwhy,.mi.done .hints{display:none}
+.foot{display:flex;justify-content:space-between;gap:10px 20px;flex-wrap:wrap;margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:.84rem;color:var(--muted);max-width:60rem}
+.foot b{color:var(--ink)}
+.rauthor{margin:18px 10px 4px;font-size:.78rem;color:var(--muted);line-height:1.6}
+.byline{font-size:.92rem;color:var(--muted);margin:-4px 0 12px}
+.byline b{color:var(--ink)}
+.rfilter{width:100%;max-width:44rem;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;padding:11px 14px;font:16px/1.3 var(--f-body);margin:6px 0 18px}
+.errs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:12px;max-width:60rem}
+.err{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;min-width:0}
+.err code{display:block;background:var(--term);color:var(--t-r);padding:8px 10px;border-radius:6px;font-size:.78rem;white-space:pre-wrap;word-break:break-word;margin-bottom:8px}
+.err p{margin:6px 0 0;font-size:.9rem;line-height:1.5}
+.err .fix{background:var(--good-soft);padding:8px 10px;border-radius:6px}
+.err .fix b{color:var(--good)}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:10px;max-width:60rem;margin:0}
+.gloss div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px}
+.gloss dt{font:700 1rem/1.3 var(--f-display)}
+.gloss dd{margin:4px 0 0;font-size:.9rem;color:var(--muted)}
+.certwrap{margin-top:48px;max-width:44rem}
+.certname input{width:100%;max-width:22rem;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;padding:10px 14px;font:16px/1.3 var(--f-body);margin-bottom:14px}
+.cert{position:relative;background:#fff;color:#18212d;border:1px solid #d3d9e0;border-radius:14px;padding:44px 28px 26px;text-align:center;box-shadow:0 18px 40px -24px rgba(10,20,40,.45);overflow:hidden}
+.cbar{position:absolute;inset:0 0 auto;height:8px;background:#d4481e}
+.ck{font:600 .74rem/1 var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:#b03a14;margin:0}
+.cn{font:800 clamp(1.8rem,6vw,2.8rem)/1.1 var(--f-display);font-stretch:85%;margin:14px 0 10px;word-break:break-word}
+.cw{max-width:30rem;margin:0 auto;color:#566271;font-size:.95rem}
+.cfoot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:24px;padding-top:12px;border-top:1px solid #e5e9ee;font-size:.82rem;color:#566271}
+.certact{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.certact a.btn{text-decoration:none;color:var(--ink)}
+.pgframe{width:100%;height:240px;border:1px solid var(--line);border-radius:8px;background:#fff;margin-top:6px}
 .chips{display:flex;gap:6px;overflow-x:auto;padding:8px 12px 0;border-top:1px solid #222d3a;scrollbar-width:none}
 .chips::-webkit-scrollbar{display:none}
 .chips button{flex:none;border:1px solid #344152;background:var(--term-2);color:var(--term-fg);border-radius:99px;padding:6px 11px;font:500 .76rem/1 var(--f-mono)}
@@ -352,7 +414,7 @@ const APP = {
   'app.js':'console.log("shop ready");',
   'README.md':'# My Shop'
 };
-function newState(files){return {files:Object.assign({},files),config:{},auth:false,repo:null,objs:{},gh:null,issues:[],prs:[],aiCount:0,aiDebug:false,history:[],events:[],openFile:null};}
+function newState(files){return {files:Object.assign({},files),config:{},auth:false,repo:null,objs:{},gh:null,issues:[],prs:[],releases:[],aiCount:0,aiDebug:false,history:[],events:[],openFile:null};}
 function base(o){o=o||{};const S=newState(Object.assign({},APP,o.extra||{}));if(o.config!==false){S.config={'user.name':'You','user.email':'you@example.com','init.defaultBranch':'main','pull.rebase':'false'};S.auth=true;}return S;}
 function seed(S,cmds){cmds.forEach(c=>run(S,c,true));S.history=[];S.events=[];return S;}
 
@@ -385,6 +447,7 @@ function resolve(S,ref){const r=S.repo;if(!ref||!r)return null;let m;
   if(ref==='HEAD'||ref==='@')return headId(S);
   if((m=ref.match(/^HEAD(~(\d*)|\^+)$/))){let n=m[2]!==undefined?(m[2]===''?1:+m[2]):m[1].length;let x=headId(S);while(n-->0&&x)x=S.objs[x].parents[0]||null;return x;}
   if(r.branches[ref])return r.branches[ref];
+  if(r.tags&&r.tags[ref])return r.tags[ref];
   if(ref.startsWith('origin/')&&r.known[ref.slice(7)])return r.known[ref.slice(7)];
   if(/^[0-9a-f]{4,}$/.test(ref)){const hit=Object.keys(S.objs).filter(k=>k.startsWith(ref));if(hit.length===1)return hit[0];}
   return null;}
@@ -414,7 +477,7 @@ function checkoutTree(S,newId){const r=S.repo,H=headTree(S),N=tr(S,newId),I=r.in
   if(bad.length)return bad;
   union(H,N).forEach(f=>{if(H[f]===N[f])return;if(N[f]===undefined){delete W[f];delete I[f];}else{W[f]=N[f];I[f]=N[f];}});return null;}
 function overwriteMsg(bad,what){return `error: Your local changes to the following files would be overwritten by ${what||'checkout'}:\n${bad.map(f=>'\t'+f).join('\n')}\nPlease commit your changes or stash them before you ${what==='merge'?'merge':'switch branches'}.\nAborting`;}
-function decor(S,id){const r=S.repo,L=[];Object.entries(r.branches).forEach(([n,x])=>{if(x===id){if(!r.detached&&n===r.head)L.unshift('HEAD -> '+n);else L.push(n);}});if(r.detached===id)L.unshift('HEAD');Object.entries(r.known).forEach(([n,x])=>{if(x===id)L.push('origin/'+n);});return L;}
+function decor(S,id){const r=S.repo,L=[];Object.entries(r.branches).forEach(([n,x])=>{if(x===id){if(!r.detached&&n===r.head)L.unshift('HEAD -> '+n);else L.push(n);}});if(r.detached===id)L.unshift('HEAD');Object.entries(r.known).forEach(([n,x])=>{if(x===id)L.push('origin/'+n);});Object.entries(r.tags||{}).forEach(([n,x])=>{if(x===id)L.push('tag: '+n);});return L;}
 
 /* ---- tokenizing ---- */
 function splitCmds(line){const parts=[];let cur='',q=null;for(let i=0;i<line.length;i++){const c=line[i];if(q){cur+=c;if(c===q&&line[i-1]!=='\\')q=null;continue;}if(c==='"'||c==="'"){q=c;cur+=c;continue;}if(c==='&'&&line[i+1]==='&'){parts.push(cur);cur='';i++;continue;}if(c===';'){parts.push(cur);cur='';continue;}cur+=c;}parts.push(cur);return parts.map(s=>s.trim()).filter(Boolean);}
@@ -460,6 +523,7 @@ function help(o){[
  ['  git revert <id>   git branch [-d|-D]   git switch [-c] <name>   git merge <branch> [--abort]',''],
  ['  git stash [pop|list]   git reflog   git rm --cached <file>   git remote -v   git grep <text>',''],
  ['  git push [-u origin <branch>]   git pull   git fetch   git clone <url>   git config --global <key> <value>',''],
+ ['  git tag [v1.0]   git push origin v1.0   gh release create v1.0 --notes "..."   gh repo edit --visibility public',''],
  ['GitHub CLI','b'],['  gh auth login | status    gh repo create <name> --private --source=. --push',''],
  ['  gh issue create --title "..."   gh issue list   gh pr create --fill   gh pr view --web   gh pr merge --squash --delete-branch',''],
  ['Practice helpers (only in this playground)','b'],
@@ -467,6 +531,7 @@ function help(o){[
  ['  test                              checks whether the shop app works','dim'],
  ['  github edit <file> "content"      a teammate edits a file on github.com','dim'],
  ['  github log                        shows the commits that are on GitHub','dim'],
+ ['  github pages [enable]             turn on / check your GitHub Pages site','dim'],
  ['Chain commands with &&. Use \\n inside quotes for a new line.','dim']].forEach(([t,c])=>o(t,c));return true;}
 
 function appTest(S,o){const bad=Object.entries(S.files).find(([f,v])=>/^(<<<<<<<|=======|>>>>>>>)/m.test(v));
@@ -487,9 +552,11 @@ function ai(S,p,o){if(!p.trim()){o('usage: ai "describe the change you want"','e
   o(`AI: Done. Added "${label}" to index.html.${n>1?' I also tidied up a couple of other things.':''}`);return true;}
 
 function github(S,a,o){const sub=a[0];
-  if(sub==='edit'){if(!S.gh||!S.gh.branches.main){o('Nothing on GitHub yet. Create the repo with gh repo create first.','err');return false;}const f=a[1];if(!f||a[2]===undefined){o('usage: github edit <file> "new content"','err');return false;}const txt=a.slice(2).join(' ').replace(/\\n/g,'\n');const t=Object.assign({},tr(S,S.gh.branches.main));t[f]=txt;const id=makeCommit(S,'Update '+f,[S.gh.branches.main],t,'teammate');S.gh.branches.main=id;S.events.push('ghEdit');o(`github.com › A teammate edited ${f} on the website and committed to main (${id}).`,'info');o('Your computer does not know yet. git pull brings it down.','dim');return true;}
+  if(sub==='edit'){if(!S.gh||!S.gh.branches.main){o('Nothing on GitHub yet. Create the repo with gh repo create first.','err');return false;}const f=a[1];if(!f||a[2]===undefined){o('usage: github edit <file> "new content"','err');return false;}const txt=a.slice(2).join(' ').replace(/\\n/g,'\n');const t=Object.assign({},tr(S,S.gh.branches.main));t[f]=txt;const id=makeCommit(S,'Update '+f,[S.gh.branches.main],t,'teammate');S.gh.branches.main=id;S.events.push('ghEdit');pagesSync(S,null);o(`github.com › A teammate edited ${f} on the website and committed to main (${id}).`,'info');o('Your computer does not know yet. git pull brings it down.','dim');return true;}
   if(sub==='log'){if(!S.gh||!Object.keys(S.gh.branches).length){o('Nothing on GitHub yet.','dim');return true;}Object.keys(S.gh.branches).forEach(b=>{o('GitHub branch '+b+':','b');[...ancestors(S,S.gh.branches[b])].sort((x,y)=>S.objs[y].seq-S.objs[x].seq).slice(0,8).forEach(id=>o(`<span class="t-y">${id}</span> ${esc(S.objs[id].msg.split('\n')[0])} <span class="t-dim">(${esc(S.objs[id].author)})</span>`,'html'));});return true;}
-  o('usage: github edit <file> "content"  |  github log','err');return false;}
+  if(sub==='pages'){if(!S.gh){o('Nothing on GitHub yet.','err');return false;}if(a[1]==='enable'||a[1]==='on'){const e=enablePages(S);if(e==='private'){o('GitHub Pages needs a public repo on a free account.\nMake it public: gh repo edit --visibility public --accept-visibility-change-consequences','err');return false;}if(e){o(e,'err');return false;}o(`Settings → Pages: source "Deploy from a branch", branch main, folder / (root). Saved.`,'ok');o(`Your site will be live at ${pagesUrl(S)} in about a minute.`,'info');return true;}
+    if(!S.gh.pages){o('GitHub Pages is off. Turn it on in the GitHub tab below, or run: github pages enable','dim');return true;}const T=tr(S,S.gh.pages.deployed);o(`Your site is live at ${pagesUrl(S)}`,'ok');o(`Showing commit ${S.gh.pages.deployed}: ${S.objs[S.gh.pages.deployed].msg.split('\n')[0]}`);if(T['index.html']===undefined)o('! There is no index.html at the top of the repo, so visitors see a 404 page.','warn');S.events.push('pagesVisit');return true;}
+  o('usage: github edit <file> "content"  |  github log  |  github pages','err');return false;}
 
 function git(S,args,o){const sub=args[0],a=args.slice(1);
   if(!sub||sub==='help'||sub==='--help'){o('Common commands: init status add commit log diff restore clean reset revert branch switch merge stash reflog rm remote push pull fetch clone config grep. Type help for details.','dim');return true;}
@@ -498,7 +565,7 @@ function git(S,args,o){const sub=args[0],a=args.slice(1);
   if(sub==='init')return gInit(S,o);
   if(sub==='clone')return gClone(S,a,o);
   if(!S.repo){o('fatal: not a git repository (or any of the parent directories): .git','err');S.events.push('noRepo');return false;}
-  const f={status:gStatus,add:gAdd,commit:gCommit,log:gLog,diff:gDiff,restore:gRestore,clean:gClean,reset:gReset,revert:gRevert,branch:gBranch,switch:gSwitch,checkout:gCheckout,merge:gMerge,stash:gStash,reflog:gReflog,rm:gRm,remote:gRemote,push:gPush,pull:gPull,fetch:gFetch,grep:gGrep,show:gShow}[sub];
+  const f={status:gStatus,add:gAdd,commit:gCommit,log:gLog,diff:gDiff,restore:gRestore,clean:gClean,reset:gReset,revert:gRevert,branch:gBranch,switch:gSwitch,checkout:gCheckout,merge:gMerge,stash:gStash,reflog:gReflog,rm:gRm,remote:gRemote,push:gPush,pull:gPull,fetch:gFetch,grep:gGrep,show:gShow,tag:gTag}[sub];
   if(!f){o(`git: '${sub}' is not a git command in this playground. Type help.`,'err');return false;}
   return f(S,a,o);}
 
@@ -512,7 +579,7 @@ function gConfig(S,a,o){a=a.filter(x=>x!=='--global'&&x!=='--local');
 function gInit(S,o){if(S.repo){o('Reinitialized existing Git repository in /home/you/shop/.git/');return true;}
   const b=S.config['init.defaultBranch'];
   if(!b)["hint: Using 'master' as the name for the initial branch.","hint: Most people now use 'main'. Set it for all future projects with:","hint:   git config --global init.defaultBranch main","hint: Rename this branch now with: git branch -M main"].forEach(x=>o(x,'warn'));
-  S.repo={index:{},branches:{},head:b||'master',detached:null,reflog:[],stash:[],merging:null,remote:null,upstream:{},known:{}};
+  S.repo={index:{},branches:{},head:b||'master',detached:null,reflog:[],stash:[],merging:null,remote:null,upstream:{},known:{},tags:{}};
   o('Initialized empty Git repository in /home/you/shop/.git/');S.events.push('init');return true;}
 
 function gStatus(S,a,o){const r=S.repo,st=status(S);
@@ -679,6 +746,7 @@ function gRemote(S,a,o){const r=S.repo;
 function gPush(S,a,o){const r=S.repo;let up=false,force=false;const pos=[];a.forEach(x=>{if(x==='-u'||x==='--set-upstream')up=true;else if(x==='-f'||x==='--force'||x==='--force-with-lease')force=true;else if(!x.startsWith('-'))pos.push(x);});
   if(!r.remote){o('fatal: No configured push destination.\nhint: connect GitHub first: gh repo create <name> --private --source=. --push','err');return false;}
   if(pos[0]&&pos[0]!=='origin'){o(`fatal: '${pos[0]}' does not appear to be a git repository`,'err');return false;}
+  r.tags=r.tags||{};if(a.includes('--tags')||(pos[1]&&r.tags[pos[1]]&&!r.branches[pos[1]])){if(!remoteOk(S)){o(`fatal: repository '${r.remote}' not found`,'err');return false;}S.gh.tags=S.gh.tags||{};const list=a.includes('--tags')?Object.keys(r.tags):[pos[1]];let any=false;o(`To ${S.gh.url}`);list.forEach(t=>{if(S.gh.tags[t]===r.tags[t])return;const fresh=!S.gh.tags[t];S.gh.tags[t]=r.tags[t];any=true;o(` * [new tag]         ${t} -> ${t}`);S.events.push('pushTag:'+t);});if(!any)o('Everything up-to-date');return true;}
   let b=pos[1]||(r.detached?null:r.head);if(b&&b.includes(':'))b=b.split(':')[0];if(b==='HEAD')b=r.head;
   if(!pos[1]&&!up&&!r.upstream[b]){o(`fatal: The current branch ${b} has no upstream branch.\nTo push the current branch and set the remote as upstream, use\n\n    git push --set-upstream origin ${b}\n`,'err');return false;}
   if(force&&b==='main')o('warning: force-pushing main rewrites history on GitHub. Avoid this on shared branches.','warn');
@@ -694,7 +762,7 @@ function doPush(S,o,b,up,force){const r=S.repo;
     o(`remote: error: GH013: Repository rule violations found for refs/heads/${b}.\nremote: - GITHUB PUSH PROTECTION\nremote:   Push cannot contain secrets.\nremote:   Secret found in ${f} (commit ${id})\n ! [remote rejected] ${b} -> ${b} (push declined due to repository rule violations)\nerror: failed to push some refs to '${S.gh.url}'`,'err');
     o('Fix: undo the commit (git reset --soft HEAD~1), take the secret out, commit again. Then revoke the key at the provider.','warn');o('(Real GitHub does this by default on public repos. Private repos need GitHub Secret Protection, so never count on it.)','dim');S.events.push('pushBlocked');return false;}}}
   S.gh.branches[b]=l;r.known[b]=l;o(`To ${S.gh.url}`);o(rm?`   ${rm}..${l}  ${b} -> ${b}${force&&!isAnc(S,rm,l)?' (forced update)':''}`:` * [new branch]      ${b} -> ${b}`);
-  if(up){r.upstream[b]=true;o(`branch '${b}' set up to track 'origin/${b}'.`);}S.events.push('push:'+b);return true;}
+  if(up){r.upstream[b]=true;o(`branch '${b}' set up to track 'origin/${b}'.`);}S.events.push('push:'+b);if(b==='main')pagesSync(S,o);return true;}
 function gPull(S,a,o){const r=S.repo;
   if(!r.remote){o('fatal: No remote repository specified. Connect GitHub first.','err');return false;}
   if(!remoteOk(S)){o(`fatal: repository '${r.remote}' not found`,'err');return false;}
@@ -708,12 +776,21 @@ function gPull(S,a,o){const r=S.repo;
 function gFetch(S,a,o){const r=S.repo;if(!remoteOk(S)){o('fatal: no GitHub remote to fetch from','err');return false;}let any=false;Object.keys(S.gh.branches).forEach(b=>{if(r.known[b]!==S.gh.branches[b]){if(!any)o(`From ${S.gh.url.replace(/\.git$/,'')}`);any=true;o(`   ${r.known[b]?r.known[b]+'..':' * [new branch] '}${S.gh.branches[b]}  ${b} -> origin/${b}`);r.known[b]=S.gh.branches[b];}});Object.keys(r.known).forEach(b=>{if(!S.gh.branches[b])delete r.known[b];});S.events.push('fetch');return true;}
 function gClone(S,a,o){const url=a.find(x=>!x.startsWith('-'));if(!url){o('usage: git clone <url>','err');return false;}
   if(!S.gh||norm(url)!==norm(S.gh.url)||!S.gh.branches.main){o(`Cloning into '${url.split('/').pop().replace(/\.git$/,'')}'...\nremote: Repository not found.\nfatal: repository '${url}' not found`,'err');return false;}
-  const m=S.gh.branches.main;S.repo={index:Object.assign({},tr(S,m)),branches:{main:m},head:'main',detached:null,reflog:[{id:m,action:'clone: from '+url}],stash:[],merging:null,remote:S.gh.url,upstream:{main:true},known:Object.assign({},S.gh.branches)};
+  const m=S.gh.branches.main;S.repo={index:Object.assign({},tr(S,m)),branches:{main:m},head:'main',detached:null,reflog:[{id:m,action:'clone: from '+url}],stash:[],merging:null,remote:S.gh.url,upstream:{main:true},known:Object.assign({},S.gh.branches),tags:Object.assign({},S.gh.tags||{})};
   S.files=Object.assign({},tr(S,m));const n=ancestors(S,m).size*3;
   o(`Cloning into '${S.gh.name}'...\nremote: Enumerating objects: ${n}, done.\nReceiving objects: 100% (${n}/${n}), done.`);o('(Playground: your folder now holds the fresh copy from GitHub, just like on a new laptop. Ignored files such as node_modules were never on GitHub, so they are gone.)','dim');S.events.push('clone');return true;}
 function gGrep(S,a,o){const n=a.includes('-n');const pat=a.find(x=>!x.startsWith('-'));if(!pat){o('usage: git grep <text>','err');return false;}let hit=false;Object.keys(S.repo.index).sort().forEach(f=>{(S.files[f]||'').split('\n').forEach((l,i)=>{if(l.includes(pat)){hit=true;o(`<span class="t-p">${esc(f)}</span>:${n?`<span class="t-g">${i+1}</span>:`:''}${esc(l)}`,'html');}});});S.events.push('grep');return hit;}
 function gShow(S,a,o){const id=resolve(S,a.find(x=>!x.startsWith('-'))||'HEAD');if(!id){o('fatal: bad revision','err');return false;}const c=S.objs[id];o(`<span class="t-y">commit ${id}</span>`,'html');o(`Author: ${c.author}`);o('');c.msg.split('\n').forEach(l=>o('    '+l));o('');const P=tr(S,c.parents[0]);union(P,c.tree).filter(f=>P[f]!==c.tree[f]).forEach(f=>printDiff(o,f,P[f],c.tree[f]));return true;}
 
+function pagesSync(S,o){if(S.gh&&S.gh.pages&&S.gh.pages.deployed!==S.gh.branches.main){S.gh.pages.deployed=S.gh.branches.main;S.gh.pages.builds=(S.gh.pages.builds||0)+1;if(o)o(`GitHub Pages: deploying the new version to ${pagesUrl(S)} (live in about a minute).`,'info');S.events.push('pagesDeploy');}}
+function pagesUrl(S){return `https://you.github.io/${S.gh.name}/`;}
+function enablePages(S){if(!S.gh||!S.gh.branches.main)return 'Push your code to GitHub first.';if(S.gh.private)return 'private';S.gh.pages={deployed:S.gh.branches.main,builds:1};S.events.push('pagesOn');return null;}
+function gTag(S,a,o){const r=S.repo;r.tags=r.tags||{};const del=a.includes('-d')||a.includes('--delete');let msg=null;const mi=a.indexOf('-m');if(mi>=0)msg=a[mi+1];const names=a.filter((x,i)=>!x.startsWith('-')&&a[i-1]!=='-m');
+  if(del){names.forEach(n=>{if(r.tags[n]){o(`Deleted tag '${n}' (was ${r.tags[n]})`);delete r.tags[n];}else o(`error: tag '${n}' not found.`,'err');});return true;}
+  if(!names.length){Object.keys(r.tags).sort().forEach(n=>o(n));S.events.push('tagList');return true;}
+  const n=names[0];if(!/^[\w.\-\/]+$/.test(n)){o(`fatal: '${n}' is not a valid tag name`,'err');return false;}if(r.tags[n]){o(`fatal: tag '${n}' already exists`,'err');return false;}
+  const id=names[1]?resolve(S,names[1]):headId(S);if(!id){o('fatal: Failed to resolve the commit to tag. Make a commit first.','err');return false;}
+  r.tags[n]=id;S.objs[id].tagMsg=S.objs[id].tagMsg||{};if(msg)S.objs[id].tagMsg[n]=msg;S.events.push('tag:'+n);return true;}
 function gh(S,args,o){const [s1,s2]=args;const rest=args.slice(2);
   if(!s1||s1==='--help'){o('gh auth login | gh repo create | gh issue create | gh pr create | gh pr merge','dim');return true;}
   if(s1==='--version'){o('gh version 2.62.0');return true;}
@@ -724,6 +801,8 @@ function gh(S,args,o){const [s1,s2]=args;const rest=args.slice(2);
   if(!S.auth){o('To get started with GitHub CLI, please run:  gh auth login','err');return false;}
   if(s1==='repo'&&s2==='create')return ghRepoCreate(S,rest,o);
   if(s1==='repo'&&s2==='view'){if(!S.gh){o('no GitHub repo yet','err');return false;}o(`you/${S.gh.name}  (${S.gh.private?'private':'public'})\n${S.gh.url.replace(/\.git$/,'')}`);return true;}
+  if(s1==='repo'&&s2==='edit'){if(!S.gh){o('X no GitHub repo for this folder','err');return false;}const vi=rest.indexOf('--visibility');const v=vi>=0?rest[vi+1]:null;if(!v){o('usage: gh repo edit --visibility public --accept-visibility-change-consequences','err');return false;}if(!rest.includes('--accept-visibility-change-consequences')){o('X use of --visibility flag requires --accept-visibility-change-consequences flag','err');return false;}S.gh.private=v!=='public';o(`✓ Edited repository you/${S.gh.name}`,'ok');o(`Visibility is now ${v}.`);if(S.gh.private&&S.gh.pages){S.gh.pages=null;o('GitHub Pages was turned off: free accounts can only publish public repos.','warn');}S.events.push('visibility:'+v);return true;}
+  if(s1==='release')return ghRelease(S,s2,rest,o);
   if(s1==='issue')return ghIssue(S,s2,rest,o);
   if(s1==='pr')return ghPr(S,s2,rest,o);
   o('unknown gh command. Try: gh auth login, gh repo create, gh issue create, gh pr create, gh pr merge','err');return false;}
@@ -733,9 +812,16 @@ function ghRepoCreate(S,a,o){const name=a.find((x,i)=>!x.startsWith('-')&&a[i-1]
   const src=a.some(x=>x.startsWith('--source'));const push=a.includes('--push');
   if(src&&!S.repo){o('X current directory is not a git repository. Run git init first.','err');return false;}
   if(push&&src&&!headId(S)){o('X nothing to push yet. Make your first commit, then run this again.','err');return false;}
-  S.gh={name,url:`https://github.com/you/${name}.git`,private:priv,branches:{}};o(`✓ Created repository you/${name} on github.com`,'ok');o(`  https://github.com/you/${name}`);S.events.push('ghCreate');
+  S.gh={name,url:`https://github.com/you/${name}.git`,private:priv,branches:{},tags:{},pages:null};o(`✓ Created repository you/${name} on github.com`,'ok');o(`  https://github.com/you/${name}`);S.events.push('ghCreate');
   if(src){S.repo.remote=S.gh.url;o('✓ Added remote '+S.gh.url,'ok');if(push){const ok=doPush(S,o,S.repo.head,true,false);if(ok)o(`✓ Pushed commits to ${S.gh.url}`,'ok');return ok;}}
   return true;}
+function ghRelease(S,sub,a,o){if(!S.gh){o('X no GitHub repo for this folder','err');return false;}S.gh.tags=S.gh.tags||{};
+  if(sub==='create'){const t=a.find((x,i)=>!x.startsWith('-')&&!['--notes','-n','--title','-t'].includes(a[i-1]));if(!t){o('usage: gh release create <tag> --notes "what changed"','err');return false;}const ni=Math.max(a.indexOf('--notes'),a.indexOf('-n'));const ti=Math.max(a.indexOf('--title'),a.indexOf('-t'));
+    if(!S.gh.tags[t]){const lt=S.repo&&S.repo.tags&&S.repo.tags[t];S.gh.tags[t]=lt||S.gh.branches.main;o(`(tag ${t} did not exist on GitHub, so it was created${lt?' from your local tag':' on the latest main'})`,'dim');}
+    if(S.releases.find(x=>x.tag===t)){o(`X a release with tag ${t} already exists`,'err');return false;}
+    S.releases.push({tag:t,title:ti>=0?a[ti+1]:t,notes:ni>=0?a[ni+1]:''});o(`https://github.com/you/${S.gh.name}/releases/tag/${t}`);S.events.push('release:'+t);return true;}
+  if(sub==='list'){if(!S.releases.length)o('no releases found');S.releases.slice().reverse().forEach((x,i)=>o(`${x.title}	${i===0?'Latest':''}	${x.tag}`));return true;}
+  o('usage: gh release create <tag> --notes "..." | gh release list','err');return false;}
 function ghIssue(S,sub,a,o){if(!S.gh){o('X no GitHub repo for this folder. Run gh repo create first.','err');return false;}
   if(sub==='create'){let i=a.indexOf('--title');if(i<0)i=a.indexOf('-t');const t=i>=0?a[i+1]:null;if(!t){o('X must provide --title when not running interactively','err');return false;}const n=S.issues.length+S.prs.length+1;S.issues.push({n,title:t,open:true});o(`\nCreating issue in you/${S.gh.name}\n\nhttps://github.com/you/${S.gh.name}/issues/${n}`);S.events.push('issue');return true;}
   if(sub==='list'){const op=S.issues.filter(x=>x.open);S.events.push('issueList');if(!op.length){o(`no open issues in you/${S.gh.name}`);return true;}o(`\nShowing ${op.length} of ${op.length} open issue${op.length>1?'s':''} in you/${S.gh.name}\n`);op.forEach(x=>o(`#${x.n}  ${x.title}`));return true;}
@@ -759,7 +845,7 @@ function ghPr(S,sub,a,o){if(!S.gh||!S.repo){o('X no GitHub repo for this folder.
     const mb=mergeBase(S,base,tip),B=tr(S,mb),M=tr(S,base),T=tr(S,tip),res={};let conflict=false;union(B,M,T).forEach(f=>{const [v,c]=mergeFile(B[f],M[f],T[f],'x');if(c)conflict=true;if(v!==undefined)res[f]=v;});
     if(conflict){o(`X Pull request #${p.n} is not mergeable: the merge commit cannot be cleanly created.\nhint: on your branch run git pull origin main, fix the conflict, push, then merge.`,'err');return false;}
     const squash=!a.includes('--merge');const id=squash?makeCommit(S,`${p.title} (#${p.n})`,[base],res,'you'):makeCommit(S,`Merge pull request #${p.n} from you/${p.branch}`,[base,tip],res,'you');
-    S.gh.branches.main=id;p.state='merged';o(`✓ ${squash?'Squashed and merged':'Merged'} pull request #${p.n} (${p.title})`,'ok');
+    S.gh.branches.main=id;p.state='merged';pagesSync(S,o);o(`✓ ${squash?'Squashed and merged':'Merged'} pull request #${p.n} (${p.title})`,'ok');
     const texts=[p.title,p.body,...[...ancestors(S,tip)].map(x=>S.objs[x].msg)].join('\n');
     S.issues.forEach(is=>{if(is.open&&new RegExp('(fix|fixes|fixed|close|closes|closed|resolve|resolves)\\s+#'+is.n+'\\b','i').test(texts)){is.open=false;o(`✓ Closed issue #${is.n} (${is.title})`,'ok');}});
     if(a.includes('--delete-branch')||a.includes('-d')){delete S.gh.branches[p.branch];delete r.known[p.branch];
@@ -971,6 +1057,8 @@ lesson:`
 echo "node_modules/" > .gitignore
 git add .
 git commit -m "Initial commit"</pre>
+<h3>Check with git status</h3>
+<p>Run <code>git status</code> after every step. It lists new files Git has never seen (untracked), files ready to save (staged, in green) and changed files (red). It never changes anything, so it is always safe.</p>
 <h3>Put it on GitHub</h3>
 <p>One command creates the GitHub repo, links it and uploads your code:</p>
 <pre>gh repo create shop --private --source=. --push</pre>
@@ -1018,6 +1106,11 @@ git push                         # 4. Upload to GitHub</pre>
 <h3>The golden habit</h3>
 <p><b>Commit before every big AI prompt. Commit again after every change that works.</b> This one habit removes almost all the fear from vibe coding.</p>
 <div class="loop" role="img" aria-label="Commit, ask the AI, test. If it works, commit again. If it broke, git restore and try another prompt."><span class="hot">Commit</span><i>→</i><span>Ask the AI</span><i>→</i><span>Test the app</span><i>→</i><span>Works? Commit again</span><i>·</i><span>Broke? <code>git restore .</code></span></div>
+<h3>Three shortcuts you will use every day</h3>
+<div class="tbl"><table><thead><tr><th>Shortcut</th><th>What it does</th></tr></thead><tbody>
+<tr><td><code>git diff</code></td><td>Shows the exact lines that changed: <b>+</b> added, <b>-</b> removed. Read it before you commit.</td></tr>
+<tr><td><code>git commit -am "msg"</code></td><td>Stages every edited file and commits in one step. Brand-new files still need <code>git add</code> first.</td></tr>
+<tr><td><code>A &amp;&amp; B</code></td><td>Runs B only if A worked. Example: <code>git add . &amp;&amp; git commit -m "Add cart"</code></td></tr></tbody></table></div>
 <h3>How often to commit</h3>
 <p>Every time you reach a state you would be sad to lose. For vibe coders that is often every 10 to 30 minutes. Small commits are easy to undo; one giant commit at the end of the day is almost useless as a save point.</p>
 <h3>Reading git status</h3>
@@ -1042,7 +1135,7 @@ lesson:`
 <pre>git diff              # changes not staged yet
 git diff --staged     # changes already staged
 git diff --stat       # just the files and line counts</pre>
-<p>Often the AI got 90% right and broke one file. Then you only undo that file.</p>
+<p>Often the AI got 90% right and broke one file. Then you only undo that file. <code>git diff app.js</code> shows the changes in one file.</p>
 <h3>Undo changes you have not committed</h3>
 <pre>git restore app.js    # undo one file
 git restore .         # undo every tracked file
@@ -1052,6 +1145,8 @@ git clean -fd         # delete them for good</pre>
 <p>Staged something by mistake? <code>git restore --staged .</code> unstages it and keeps the change in your files.</p>
 <h3>History and commit IDs</h3>
 <p><code>git log --oneline</code> lists commits. The 7-character code at the start of each line, like <code>a1b2c3d</code>, is the commit ID you use to travel in time.</p>
+<h3>HEAD and HEAD~1</h3>
+<p><b>HEAD</b> means "the commit you are on now". <b>HEAD~1</b> is the one before it, <b>HEAD~2</b> two before, and so on. Commands like <code>git reset --soft HEAD~1</code> use these instead of IDs.</p>
 <h3>Undo commits</h3>
 <div class="tbl"><table><thead><tr><th>Situation</th><th>Command</th><th>Safe?</th></tr></thead><tbody>
 <tr><td>Undo the last commit, keep the changes</td><td><code>git reset --soft HEAD~1</code></td><td>Yes</td></tr>
@@ -1145,6 +1240,8 @@ build/
 <p><code>!.env.example</code> means "do track this one". Keep an <code>.env.example</code> with the variable <b>names</b> and fake values, so others know which keys the app needs. Tip: ask your AI to "create a .gitignore for this project".</p>
 <h3>Where secrets live</h3>
 <ul><li><b>On your computer:</b> in <code>.env</code>, which Git ignores.</li><li><b>On your host:</b> in the environment variables of Vercel, Netlify, Render or Supabase.</li><li><b>Never:</b> typed into a .js or .py file. AI tools sometimes paste keys straight into code, so read the diff before every commit.</li></ul>
+<h3>Adding a line to a file</h3>
+<p>In the terminal, <code>echo "text" &gt; file</code> <b>replaces</b> the whole file with that text, and <code>echo "text" &gt;&gt; file</code> <b>adds</b> a line to the end. To add a rule to an existing .gitignore, always use <b>&gt;&gt;</b>, or edit the file in your code editor.</p>
 <h3>Already tracking a file you should ignore?</h3>
 <p>Adding a file to .gitignore does not untrack it. Remove it from tracking; the file stays on your disk:</p>
 <pre>git rm --cached passwords.txt
@@ -1302,6 +1399,80 @@ quiz:[
  {q:'Which prefix fits cleanup that does not change behaviour?',o:['feat:','fix:','refactor:','docs:'],a:2,why:'refactor means the code is reorganised but works the same.'},
  {q:'Why never git push --force to main?',o:['It is slow','It overwrites history on GitHub and can delete work','It makes the repo public','It breaks .gitignore'],a:1,why:'Anyone else\'s commits, and your own earlier pushes, can vanish.'}]},
 
+{id:'ch12',n:12,title:'Publish a Website with GitHub Pages',mins:7,blurb:'Put a site online for free, straight from your repo, and update it with git push.',
+lead:'GitHub Pages turns a repo into a live website for free. Every push to main updates the site.',
+lesson:`
+<h3>What GitHub Pages can host</h3>
+<p>Pages serves <b>static files</b>: HTML, CSS, JavaScript, images. That covers portfolios, landing pages, documentation, and single-file tools like the book you are reading.</p>
+<div class="tbl"><table><thead><tr><th>Your project</th><th>Where to publish</th></tr></thead><tbody>
+<tr><td>Plain HTML, CSS and JS files</td><td>GitHub Pages, as in this chapter</td></tr>
+<tr><td>React, Vite or Next.js app (needs <code>npm run build</code>)</td><td>Vercel or Netlify are easier. Pages can do it, but needs a build step with GitHub Actions.</td></tr>
+<tr><td>App with a login or database (Supabase, Firebase)</td><td>Vercel, Netlify or Lovable's own hosting</td></tr></tbody></table></div>
+<h3>The two rules</h3>
+<ul><li><b>The repo must be public</b> on a free GitHub account. Private repos need GitHub Pro.</li><li><b>index.html must sit at the top level</b> of the repo (or of the folder you choose). That file is your home page.</li></ul>
+<div class="note warn"><b>Public means anyone can read the code.</b> Check for secrets before making a repo public (Chapter 7).</div>
+<h3>Publish in four steps</h3>
+<pre>git init
+git add . && git commit -m "Initial site"
+gh repo create portfolio --public --source=. --push</pre>
+<p>Then on github.com: open the repo → <b>Settings</b> → <b>Pages</b>. Under Build and deployment choose <b>Deploy from a branch</b>, branch <b>main</b>, folder <b>/ (root)</b>, and press <b>Save</b>. After a minute or two the page shows "Your site is live at…".</p>
+<p>Already have a private repo? Make it public with:</p>
+<pre>gh repo edit --visibility public --accept-visibility-change-consequences</pre>
+<h3>Your address</h3>
+<div class="tbl"><table><thead><tr><th>Repo name</th><th>Site address</th></tr></thead><tbody>
+<tr><td><code>portfolio</code></td><td>https://your-username.github.io/portfolio/</td></tr>
+<tr><td><code>your-username.github.io</code> (special name, one per account)</td><td>https://your-username.github.io/</td></tr></tbody></table></div>
+<p>A custom domain like www.yourname.in can be added later in the same Pages settings.</p>
+<h3>Updating the site</h3>
+<p>Edit, commit, push. That's it. GitHub rebuilds the site within a minute or two. If you still see the old version, hard-refresh: Ctrl + Shift + R on Windows, Cmd + Shift + R on Mac.</p>
+<h3>If you see a 404 page</h3>
+<ul><li>Wait two minutes after turning Pages on.</li><li>Check the file is named exactly <code>index.html</code>, all lowercase, at the top level.</li><li>Check Pages is set to the branch you actually pushed (usually main).</li><li>Look at the <b>Actions</b> tab: a red cross means the deploy failed; click it to see why.</li></ul>`,
+lab:{intro:'Publish a small portfolio site. In this playground the GitHub tab has a Pages section that works like Settings → Pages on github.com.',setup:()=>base({extra:{'index.html':'<h1>My Portfolio</h1>\n<p>I build no-code apps and automations.</p>','style.css':'body { font-family: sans-serif; padding: 24px; }\nh1 { color: #d4481e; }','README.md':'# My Portfolio'}}),missions:[
+ {t:'Make the folder a repo and commit the site.',hint:['git init','git add . && git commit -m "Initial site"'],check:S=>!!headId(S)},
+ {t:'Create a public GitHub repo and push.',hint:['gh repo create portfolio --public --source=. --push'],check:S=>synced(S)&&S.gh&&!S.gh.private},
+ {t:'Turn on GitHub Pages.',hint:['github pages enable'],note:'Or open the GitHub tab below the terminal and press Turn on GitHub Pages.',check:S=>E(S,'pagesOn')},
+ {t:'Look at your live site.',hint:['github pages'],note:'Or press Preview live site in the GitHub tab.',check:S=>E(S,'pagesOn')&&E(S,'pagesVisit')},
+ {t:'Change the site and push. It updates by itself.',hint:['ai "add a contact section" && git commit -am "feat: add contact section" && git push'],check:S=>E(S,'pagesDeploy')},
+ {t:'Check the live site shows the new version.',hint:['github pages'],check:S=>{const d=S.events.lastIndexOf('pagesDeploy');return d>=0&&S.events.lastIndexOf('pagesVisit')>d;}}]},
+quiz:[
+ {q:'On a free GitHub account, which repos can use GitHub Pages?',o:['Only private repos','Only public repos','Any repo','Only repos named index'],a:1,why:'Private repos need GitHub Pro or a paid plan for Pages.'},
+ {q:'Your Pages site shows 404. What do you check first?',o:['That index.html is at the top level and Pages is on, then wait 2 minutes','Reinstall Git','Delete the repo','Turn on two-factor authentication'],a:0,why:'A missing or misnamed index.html, or a site that is still building, causes most 404s.'},
+ {q:'You pushed an update but the site looks old. Why?',o:['Pages only updates weekly','Your browser shows a saved copy, or the build is still running','You must re-enable Pages each time','Pushes do not update Pages'],a:1,why:'Hard-refresh, and check the Actions tab for the latest build.'}]},
+
+{id:'ch13',n:13,title:'Extra Skills: Tags, Forks, Big Files, Safe main',mins:8,blurb:'Name working versions, copy other people\'s projects, avoid the 100 MB wall, and lock main.',
+lead:'Four skills you will need once your projects get real: tags, forks, big files and branch protection.',
+lesson:`
+<h3>Tags: name a version that works</h3>
+<p>A tag is a permanent name for one commit, like a bookmark: "this is v1.0, the version I gave the client". Unlike a branch, a tag never moves.</p>
+<pre>git tag v1.0                    # tag the commit you are on
+git tag                         # list tags
+git push origin v1.0            # tags are not pushed by git push alone
+git push --tags                 # push every tag
+git switch --detach v1.0        # look at that version
+git switch main                 # come back</pre>
+<p>A <b>release</b> is a tag with notes on GitHub, shown on the repo's front page. Clients and users can see what changed.</p>
+<pre>gh release create v1.0 --notes "First version for the client"</pre>
+<h3>Forks and templates: start from someone else's project</h3>
+<ul><li><b>Fork</b> = your own copy of someone else's repo, on your GitHub account. Use it to customise an open-source project or to suggest changes back with a pull request.</li><li><b>Use this template</b> (a green button on template repos) = a fresh repo with their files but none of their history. Best for starter kits.</li></ul>
+<pre>gh repo fork owner/project --clone    # fork it and download your copy</pre>
+<h3>Big files: the 100 MB wall</h3>
+<p>GitHub rejects any single file over <b>100 MB</b> and warns above 50 MB. Videos, zip files, database dumps and design exports are the usual culprits.</p>
+<ul><li>Keep them out with <code>.gitignore</code> (<code>*.mp4</code>, <code>*.zip</code>, <code>exports/</code>) and store them in Google Drive or a storage bucket.</li><li>Committed one by mistake and not pushed yet? <code>git rm --cached bigfile.mp4</code>, add it to .gitignore, then <code>git commit --amend</code> if it was in your last commit.</li><li>Really need large files in the repo? Look up <b>Git LFS</b> (Large File Storage).</li></ul>
+<h3>Protect main</h3>
+<p>Branch protection stops anyone, including an AI agent with your login, from force-pushing to main or deleting it. On github.com: repo <b>Settings → Rules → Rulesets</b> (or Settings → Branches on some accounts), target the <b>main</b> branch, and turn on <b>Block force pushes</b>. For teams, also turn on <b>Require a pull request before merging</b>.</p>
+<p>On a free account this works for public repos; private repos need GitHub Pro or Team.</p>`,
+lab:{intro:'Tag your first working version, publish it as a release, then travel back to it.',setup:()=>seed(base(),[...START,'ai "add a product list"','git commit -am "feat: add product list"','git push']),missions:[
+ {t:'Tag the current commit as v1.0.',hint:['git tag v1.0'],check:S=>E(S,'tag:v1.0')},
+ {t:'See the tag in your history.',hint:['git log --oneline'],check:S=>E(S,'tag:v1.0')&&S.events.lastIndexOf('log')>S.events.indexOf('tag:v1.0')},
+ {t:'Push the tag to GitHub.',hint:['git push origin v1.0'],check:S=>E(S,'pushTag:v1.0')},
+ {t:'Publish it as a release with notes.',hint:['gh release create v1.0 --notes "First stable version"'],check:S=>E(S,'release:v1.0')},
+ {t:'Make a new change, then look at v1.0 again and come back.',hint:['ai "add a cart" && git commit -am "feat: add cart"','git switch --detach v1.0','cat index.html','git switch main'],check:S=>{const d=S.events.indexOf('detach');return d>=0&&S.events.lastIndexOf('switch:main')>d;}},
+ {t:'Tag v1.1 and push all tags at once.',hint:['git tag v1.1 && git push --tags'],check:S=>E(S,'pushTag:v1.1')}]},
+quiz:[
+ {q:'What is the difference between a tag and a branch?',o:['None','A tag always points to the same commit; a branch moves forward as you commit','Tags are only on GitHub','Branches cannot be deleted'],a:1,why:'That is why tags are used to name releases.'},
+ {q:'GitHub rejects your push because a file is 240 MB. What is the fix?',o:['Push again later','Remove it from the commit, add it to .gitignore, store it elsewhere','Make the repo public','Use git push --force'],a:1,why:'The limit is 100 MB per file. Large files belong in storage, or in Git LFS.'},
+ {q:'You want a starter kit\'s files without its history. Which do you use?',o:['Fork','Use this template','git clone --force','A release'],a:1,why:'A template gives a clean new repo. A fork keeps the link and the history.'}]},
+
 {id:'capstone',n:'★',title:'Capstone: Ship It the Pro Way',mins:30,blurb:'Every skill in one project, from empty folder to a merged, secret-free repo.',
 lead:'Use every skill in this book on one project. No step-by-step this time: the missions say what, the hints say how.',
 lesson:`
@@ -1319,11 +1490,218 @@ lab:{intro:'Go in any order. The checklist ticks itself as you meet each goal.',
  {t:'Finish: everything pushed, nothing uncommitted, no .env on GitHub.',hint:['git status','git push'],check:S=>synced(S)&&isClean(S)&&commitCount(S)>=6&&!Object.values(S.gh.branches).some(id=>[...ancestors(S,id)].some(x=>S.objs[x].tree['.env']!==undefined))}]},
 quiz:[]},
 
+{id:'real',n:'✓',checklist:['Open a terminal inside your real project folder','Run git status (if it says "not a git repository", run git init)','Create a .gitignore with node_modules/, .env and dist/','Search your code for API keys and move them into .env','git add . && git commit -m "Initial commit"','gh repo create my-project --private --source=. --push','Open the repo on github.com and check the files are there','Ask your AI for one change, read git diff, commit and push','Make a branch, push it, open a pull request and merge it','Tag the first working version: git tag v1.0 && git push --tags','Publish it: GitHub Pages for plain HTML, or connect Vercel or Netlify'],
+title:'Do It for Real',mins:30,blurb:'Leave the playground: the same steps, on your own computer and your own project.',
+lead:'Everything you practised works the same on your own computer. Pick one real project and walk it through the checklist.',
+lesson:`
+<p>The playground is safe because nothing is real. Now make one real project safe the same way. Choose something small, like a page an AI tool built for you, so a mistake costs nothing.</p>
+<h3>Open a terminal in the right folder</h3>
+<p>Git works on the folder your terminal is in, so this matters more than anything else.</p>
+<ul><li><b>VS Code or Cursor (easiest):</b> File → Open Folder, pick the project, then Terminal → New Terminal. It opens in that folder.</li><li><b>Windows:</b> in File Explorer, right-click inside the folder → Open in Terminal.</li><li><b>Mac:</b> type <code>cd </code> (with a space) in Terminal, drag the folder onto the window, press Enter.</li></ul>
+<div class="tbl"><table><thead><tr><th>Command</th><th>What it does</th></tr></thead><tbody>
+<tr><td><code>pwd</code></td><td>Shows which folder you are in</td></tr>
+<tr><td><code>ls</code></td><td>Lists the files here (works in PowerShell too)</td></tr>
+<tr><td><code>cd my-project</code></td><td>Goes into a folder</td></tr>
+<tr><td><code>cd ..</code></td><td>Goes up one folder</td></tr></tbody></table></div>
+<div class="note warn"><b>Never run git init in your home folder or Desktop.</b> Git would try to track everything on your computer. If <code>git status</code> shows hundreds of unrelated files, you are in the wrong folder.</div>
+<h3>When something goes wrong</h3>
+<p>Copy the exact error and look it up on the <a href="#errors">Common errors</a> page, or paste it to your AI tool with "explain this Git error and how to fix it safely". Run <code>git status</code> first; it usually tells you what to do next.</p>`,
+lab:{missions:[]},quiz:[]},
+
 {id:'sandbox',n:'∞',title:'Sandbox',mins:0,blurb:'A free playground with no missions. Try anything.',
 lead:'No missions, no rules. Try any command from the book and watch the Files, History and GitHub tabs react.',
 lesson:`<p>Git and the GitHub CLI are set up and logged in. The folder holds the shop app and is not a repo yet. Type <code>help</code> to see every command this playground understands, or press Reset to start over.</p>`,
 lab:{intro:'Free play.',setup:()=>base({extra:{'node_modules/react.js':'// library code'}}),missions:[]},quiz:[]}
 ];
+
+/* ===== Guided mode: why + what you should see, per mission ===== */
+const GUIDE={
+ch1:[["ls lists the files in the current folder.","README.md, app.js, index.html and style.css"],
+ ["cat prints what is inside a file.","The two lines of the shop's home page."],
+ ["ai is this playground's pretend AI. It edits your files the way a real AI tool would.","AI: Done. I redesigned the page…"],
+ ["test is a playground helper that checks whether the shop app still works.","✗ App is broken"],
+ ["git restore . undoes changes, but only inside a Git repository. This folder isn't one yet.","fatal: not a git repository. No Git means no save point to go back to."]],
+ch2:[["Every Git command starts with git. --version just prints which version is installed.","git version 2.47.0"],
+ ["git config --global saves a setting for every project on this computer. user.name is stamped on each commit.","Nothing. In Git, no message usually means it worked."],
+ ["Use your GitHub email so GitHub can link your commits to your profile.","Nothing printed."],
+ ["New repos will start on a branch called main instead of the old default, master.","Nothing printed."],
+ ["Tells git pull to merge GitHub's changes into yours instead of stopping with an error.","Nothing printed."],
+ ["--list prints every setting you have saved, so you can spot typos.","user.name=…, user.email=… and the rest"],
+ ["gh is GitHub's own command-line tool. auth login connects it to your GitHub account, once.","✓ Logged in as you"],
+ ["auth status confirms that the login worked.","✓ Logged in to github.com account you"]],
+ch3:[["git init creates the hidden .git folder. From now on Git watches this folder.","Initialized empty Git repository"],
+ ["git status tells you what Git sees. It never changes anything, so run it whenever you're unsure.","node_modules/ and every file listed in red under Untracked files"],
+ ["echo \"text\" > file writes text into a file, creating it if needed. Here it writes the rule node_modules/ into .gitignore.","Nothing printed. In the Files tab, node_modules now says ignored."],
+ ["git add . stages every file except ignored ones. Run git status after it to check.","Files in green as new file. node_modules is not in the list."],
+ ["git commit saves what you staged. -m adds the message. This is your first save point.","[main (root-commit) …] Initial commit"],
+ ["Creates a private repo on GitHub, links it to this folder as origin, and uploads your commit.","✓ Created repository you/shop … ✓ Pushed commits"],
+ ["git remote -v shows the GitHub address this repo pushes to.","origin https://github.com/you/shop.git"],
+ ["git clone downloads a repo from GitHub, exactly what you'd do on a new laptop.","Cloning into 'shop'… done"]],
+ch4:[["The pretend AI adds a section to index.html, like a real AI feature request.","AI: Done. Added \"product list\" to index.html."],
+ ["Always test before you save.","✓ App works"],
+ ["git status lists changed files in red. git diff shows the exact lines: + added, - removed.","modified: index.html"],
+ ["Stage the change, then save it. You can chain both with &&.","[main …] Add product list"],
+ ["&& runs the next command only if the one before it worked, so one line does prompt, test and save.","Two more commits. git log --oneline now lists 4."],
+ ["git push uploads your new commits to GitHub.","main -> main"],
+ ["Clean means every change is committed. Up to date means GitHub has it too.","nothing to commit, working tree clean"]],
+ch5:[["This prompt always breaks the app and leaves junk files behind.","AI: Done. I redesigned the page… then test says ✗"],
+ ["--stat lists each changed file and how many lines changed, without the full detail.","index.html and style.css with + and - marks"],
+ ["git restore . puts every tracked file back to the last commit.","Nothing printed. test now says ✓ App works."],
+ ["restore does not touch brand-new files. clean -n previews which ones would go; clean -fd deletes them.","Would remove test1.js … then Removing test1.js …"],
+ ["echo … >> app.js adds a line to the end of a file. commit -am stages edited files and commits in one step. HEAD~1 means one commit before where you are; --soft moves back but keeps the change staged.","(HEAD moved to … Your changes are still staged…)"],
+ ["First clear the leftover change from the last mission. Then git revert HEAD adds a new commit that undoes the latest one, safe even after pushing.","[main …] Revert \"Style the product list\""],
+ ["git log --oneline shows each commit's 7-character ID. --source=<id> brings one file back from that commit. Replace <first-id> with the ID next to Initial commit.","Nothing printed. cat index.html shows the original two lines."],
+ ["reset --hard removes the latest commit from your branch. git reflog lists every position you've been in, with IDs. Copy the ID from the line just below the reset and reset --hard to it.","HEAD is now at … (your commit is back)"],
+ ["stash puts unfinished edits aside and leaves a clean folder. stash pop brings them back.","Saved working directory… then Dropped refs/stash@{0}"]],
+ch6:[["switch -c creates a branch and moves you onto it. Watch the prompt change to (feature/cart).","Switched to a new branch 'feature/cart'"],
+ ["This commit exists only on feature/cart. main doesn't have it.","[feature/cart …] Add cart button"],
+ ["Switching branches swaps your files to that branch's version. cat shows main has no cart.","Switched to branch 'main'"],
+ ["git merge brings the named branch's commits into the branch you're on, here main.","Fast-forward"],
+ ["-d deletes a branch that is already merged. Its commits stay on main.","Deleted branch feature/cart"],
+ ["Risky changes go on their own branch, so main stays safe.","[experiment/redesign …] Try redesign"],
+ ["-D (capital) deletes a branch even if it was never merged. main never saw the bad change.","Deleted branch experiment/redesign … test says ✓"],
+ ["Upload main, which now includes the cart.","main -> main"]],
+ch7:[["A .env file holds secret keys for your app. This one is fake.","Nothing printed. .env appears in the Files tab."],
+ ["git status shows .env as untracked, which means git add . would save it. Dangerous.",".env listed under Untracked files"],
+ ["echo \"text\" >> file adds a line to the end of a file. A single > would replace the whole file.",".env disappears from git status"],
+ ["rm --cached stops tracking a file but keeps it on your disk. Then .gitignore keeps it out for good.","rm 'passwords.txt'"],
+ ["Save the new .gitignore and the removal of passwords.txt, then upload.","main -> main"],
+ ["The AI pastes a live key into app.js. commit -am saves it and push tries to send it.","Push cannot contain secrets … push declined"],
+ ["reset --soft HEAD~1 undoes the commit but keeps the change staged. restore --staged app.js unstages it; restore app.js removes the key from the file.","Everything up-to-date"]],
+ch8:[["An issue is a to-do item on GitHub. Your first one becomes #1.","https://github.com/you/shop/issues/1"],
+ ["Lists the issues that are still open.","#1  Add footer with shop address"],
+ ["One branch per issue keeps work separate.","Switched to a new branch 'feature/footer'"],
+ ["\"fixes #1\" in the message tells GitHub this work closes issue 1.","[feature/footer …] Add footer, fixes #1"],
+ ["A new branch isn't on GitHub yet. -u origin <branch> uploads it and remembers the link.","* [new branch] feature/footer -> feature/footer"],
+ ["A pull request asks to merge your branch into main. --fill uses your commit message as its title.","https://github.com/you/shop/pull/2"],
+ ["Shows the pull request and every changed line, like the Files changed tab on github.com.","diff --git a/index.html … with + lines"],
+ ["--squash turns the branch into one tidy commit on main. --delete-branch removes the branch and switches you to main.","✓ Squashed and merged … ✓ Closed issue #1"],
+ ["The merge happened on GitHub, so download it to your computer.","Fast-forward"]],
+ch9:[["github edit is a playground helper: it pretends a teammate changed a file on github.com. \\n inside quotes starts a new line.","github.com › A teammate edited README.md…"],
+ ["GitHub now has a commit you don't have, so it refuses your push.","! [rejected] main -> main (fetch first)"],
+ ["git pull downloads the teammate's commit and merges it with yours. Then push works.","Merge made by the 'ort' strategy … then main -> main"],
+ ["Both sides change line 1 of index.html, so Git can't choose. Run the three commands in order.","CONFLICT (content): Merge conflict in index.html"],
+ ["Open index.html in the Files tab below the terminal. Keep one heading, delete the <<<<<<<, ======= and >>>>>>> lines, press Save. Then add and commit.","[main …] Resolve heading conflict"],
+ ["Check nothing broke, then upload the result.","✓ App works … main -> main"],
+ ["git merge --abort cancels a merge and puts every file back as it was.","Merge aborted."]],
+ch10:[["Start every AI task on a branch, so main stays safe.","Switched to a new branch 'feature/search'"],
+ ["In this lab the AI also sneaks an extra line into app.js, as real tools sometimes do.","AI: Done. Added \"search box\"… I also tidied up…"],
+ ["--stat shows every file the AI touched. Was app.js part of your request?","index.html and app.js both changed"],
+ ["git diff <file> shows one file's changes. git restore <file> undoes only that file.","+console.log(\"debug: remove me\");"],
+ ["feat: at the start marks a new feature (Chapter 11 has the full list).","[feature/search …] feat: add search box"],
+ ["Upload the branch, then open a pull request for review.","https://github.com/you/shop/pull/…"],
+ ["-5 shows only the last 5 commits. This is what an AI reads to understand your project.","A short list of commits with IDs"]],
+ch12:[["git init makes the folder a repo; the commit is the first version of your site.","[main (root-commit) …] Initial site"],
+ ["--public is required for free GitHub Pages. Make sure the site has no secrets.","✓ Created repository you/portfolio … ✓ Pushed commits"],
+ ["On github.com this is Settings → Pages → Deploy from a branch → main → / (root) → Save. Here, the helper does the same click.","Your site will be live at https://you.github.io/portfolio/"],
+ ["github pages shows what visitors see right now. On the real site, just open the link.","Your site is live at … Showing commit …"],
+ ["Every push to main redeploys the site. No extra step.","GitHub Pages: deploying the new version…"],
+ ["After a deploy, check again. On a real phone or laptop, hard-refresh if it looks old.","Showing commit … feat: add contact section"]],
+ch13:[["A tag is a permanent name for the commit you are on.","Nothing printed."],
+ ["The tag appears next to the commit, like a label.","(HEAD -> main, origin/main, tag: v1.0)"],
+ ["git push does not send tags. Push the tag by name.","* [new tag] v1.0 -> v1.0"],
+ ["A release is a tag with notes that people see on GitHub.","https://github.com/you/shop/releases/tag/v1.0"],
+ ["--detach v1.0 shows that exact version. cat proves the cart is not there yet. Then go back to main.","HEAD is now at … then Switched to branch 'main'"],
+ ["--tags pushes every tag you have not pushed yet.","* [new tag] v1.1 -> v1.1"]],
+ch11:[["feat: = a new feature.","[main …] feat: add WhatsApp order button"],
+ ["fix: = a bug fix. commit -am stages edited files and commits in one step.","[main …] fix: heading colour on mobile"],
+ ["chore: = housekeeping like versions, config or packages.","[main …] chore: bump version to 1.0.1"],
+ ["--amend replaces the last commit's message. Only use it before you push.","[main …] refactor: tidy app.js"],
+ ["Your history should now read like a changelog.","feat:, fix:, chore:, refactor: lines"],
+ ["Upload it all.","main -> main"]]
+};
+
+/* ===== Author ===== */
+const AUTHOR={name:'Shri Ram',brand:'No Code with Shri',links:[['Instagram','https://www.instagram.com/nocodewithshri/'],['LinkedIn','https://www.linkedin.com/in/nocodewithshri/']]};
+function authorLinks(){return AUTHOR.links.map(([l,u])=>`<a href="${u}" target="_blank" rel="noopener">${l}</a>`).join(' · ');}
+function footer(){return `<footer class="foot"><span>Git for Vibe Coders · made by <b>${esc(AUTHOR.name)}</b> (${esc(AUTHOR.brand)})</span><span>${authorLinks()}</span></footer>`;}
+
+/* ===== Reference: common errors ===== */
+const ERRORS=[
+['fatal: not a git repository (or any of the parent directories): .git','Your terminal is not inside a Git project folder.','cd into your project folder (pwd shows where you are). New project? Run git init.'],
+['Author identity unknown / Please tell me who you are','Git does not know your name and email yet.','git config --global user.name "Your Name" and git config --global user.email "you@example.com"'],
+['! [rejected] main -> main (fetch first) / Updates were rejected','GitHub has commits you do not have yet.','git pull, then git push.'],
+['fatal: The current branch X has no upstream branch','This branch was never pushed, so Git does not know where it goes.','git push -u origin X (use your branch name).'],
+['Need to specify how to reconcile divergent branches','You and GitHub both have new commits, and Git asks how to combine them.','git config --global pull.rebase false, then git pull again.'],
+['CONFLICT (content): Merge conflict in file','The same lines changed in two places.','Open the file, keep the right lines, delete the <<<<<<< ======= >>>>>>> lines, then git add . and git commit. Cancel with git merge --abort.'],
+['Your local changes to the following files would be overwritten by checkout (or merge)','You have uncommitted edits that would be lost by switching or merging.','Commit them (git add . && git commit -m "…") or park them (git stash), then try again.'],
+["You are in 'detached HEAD' state",'You are looking at an old commit or a tag, not a branch.','git switch main to go back. Want to keep work made here? git switch -c new-branch-name first.'],
+['remote: Support for password authentication was removed','GitHub stopped accepting passwords from Git in 2021.','Run gh auth login and choose HTTPS. It signs you in through the browser.'],
+['Permission denied (publickey)','Your remote uses an SSH address, but no SSH key is set up.','Switch to HTTPS: git remote set-url origin https://github.com/you/repo.git, then gh auth login.'],
+["remote: error: File X is 120 MB; this exceeds GitHub's file size limit of 100.00 MB",'A file over 100 MB is in your commits.','git rm --cached that-file, add it to .gitignore, commit again (git commit --amend if it was the last commit). Store big files outside Git.'],
+['Push cannot contain secrets / GH013 push protection','GitHub found an API key in your commits.','Revoke the key at the provider. Then git reset --soft HEAD~1, remove the key, commit and push again.'],
+['error: src refspec main does not match any','There are no commits yet, or your branch is called master.','Make a first commit, or rename the branch: git branch -M main.'],
+['error: remote origin already exists','The repo already has a GitHub address.','Change it: git remote set-url origin <new-url>. Check with git remote -v.'],
+['fatal: refusing to merge unrelated histories','You created the GitHub repo with a README, separately from your local repo.','git pull origin main --allow-unrelated-histories, fix any conflict, commit, push. Next time create the repo empty or use gh repo create.'],
+["error: pathspec 'x' did not match any file(s) known to git",'A typo in a file or branch name, or the file is not tracked.','Check names with git status or git branch.'],
+["error: the branch 'x' is not fully merged",'That branch has commits that are not on your current branch.','Merge it first, or delete it anyway with git branch -D x if you do not need it.'],
+["fatal: destination path 'x' already exists and is not an empty directory",'git clone wants to create a folder that already exists.','Clone somewhere else, or give a new folder name: git clone <url> new-name.'],
+['warning: in the working copy of file, LF will be replaced by CRLF','Windows and Mac end lines differently. This is only a warning.','Safe to ignore. git config --global core.autocrlf true (Windows) keeps it consistent.'],
+['A strange editor (Vim) opens and you cannot get out','Git opened its default terminal editor to ask for a message.','Press Esc, type :wq and press Enter. To avoid it: git config --global core.editor "code --wait"'],
+["GitHub Pages: There isn't a GitHub Pages site here (404)",'Pages is off, still building, or index.html is missing.','Check Settings → Pages, that index.html is at the top level, that the repo is public, and wait two minutes.'],
+["'git' is not recognized / git: command not found",'Git is not installed, or the terminal was open during the install.','Close and reopen the terminal. Still failing: see Chapter 0.']];
+
+/* ===== Reference: glossary ===== */
+const GLOSS=[
+['Branch','A separate line of work. main is the default one.'],['Clone','Download a full copy of a GitHub repo, with its history.'],['Commit','A saved snapshot of your staged changes, with a message and an ID.'],['Commit ID','The code that names a commit, like a1b2c3d.'],
+['Conflict','Two changes to the same lines that Git cannot combine by itself.'],['Conventional commit','A message that starts with a type, such as feat:, fix: or chore:.'],['Detached HEAD','Looking at an old commit or tag instead of a branch.'],['Diff','The line-by-line difference between two versions.'],
+['Fast-forward','A merge where Git just moves the branch forward, with no merge commit.'],['Fetch','Download new commits from GitHub without merging them.'],['Fork','Your own GitHub copy of someone else\'s repo.'],['.gitignore','A file listing what Git must never track.'],
+['GitHub Pages','Free hosting for static websites, straight from a repo.'],['HEAD','The commit you are on right now.'],['HEAD~1','The commit before HEAD. HEAD~2 is two before.'],['Issue','A to-do item, bug or idea on GitHub.'],
+['Main','The default branch, the version that should always work.'],['Merge','Combine one branch\'s commits into another.'],['Origin','The usual nickname for your GitHub copy of the repo.'],['Pull','Download and merge new commits from GitHub.'],
+['Pull request (PR)','A GitHub page proposing to merge a branch, showing every change.'],['Push','Upload your commits to GitHub.'],['Rebase','Replay commits on top of another branch. Skip it until you are comfortable.'],['Reflog','Git\'s diary of everywhere HEAD has been. Used to find lost commits.'],
+['Release','A tag with notes, shown on GitHub.'],['Remote','A copy of the repo somewhere else, usually GitHub.'],['Repository (repo)','A project folder whose history Git tracks.'],['Squash merge','Merging a branch as one single commit.'],
+['Staging area','The changes that will go into the next commit.'],['Stash','A temporary shelf for unfinished changes.'],['Tag','A permanent name for one commit, like v1.0.'],['Untracked file','A file Git has never been told to track.'],
+['Upstream','The GitHub branch your local branch pushes to and pulls from.'],['Working tree','The actual files in your project folder right now.'],['Worktree','An extra folder linked to the same repo, on its own branch.'],['Branch protection','GitHub settings that stop force pushes or direct pushes to main.'],['Git LFS','An add-on for storing large files outside normal Git.']].sort((a,b)=>a[0].replace(/^\./,'').localeCompare(b[0].replace(/^\./,'')));
+
+/* ===== Reference: VS Code / Cursor ===== */
+const GUI=[
+['Open Source Control','—','Click the branch icon in the left bar, or Ctrl + Shift + G (Cmd + Shift + G on Mac)'],
+['Start a repo','git init','Initialize Repository button'],
+['See what changed','git status / git diff','The Changes list. Click a file to see old and new side by side.'],
+['Stage one file','git add file','Hover the file → click +'],
+['Stage everything','git add .','Hover the Changes heading → click +'],
+['Commit','git commit -m "…"','Type the message in the box at the top → Commit (Ctrl + Enter)'],
+['Push and pull','git push / git pull','Sync Changes button, or the … menu → Pull / Push'],
+['Put a new project on GitHub','gh repo create','Publish to GitHub button (choose private or public)'],
+['Undo a file\'s changes','git restore file','Hover the file → Discard Changes (curved arrow). Careful: no undo.'],
+['Unstage','git restore --staged file','Hover the staged file → click −'],
+['Create or switch branch','git switch -c name / git switch name','Click the branch name in the bottom-left status bar'],
+['Merge a branch','git merge name','Command Palette (Ctrl + Shift + P) → Git: Merge Branch…'],
+['Stash','git stash / git stash pop','… menu → Stash → Stash / Pop Latest Stash'],
+['See history','git log','The Source Control Graph section, or the GitLens extension'],
+['Resolve a conflict','edit the file','Accept Current / Accept Incoming / Accept Both buttons above each conflict, or Resolve in Merge Editor']];
+
+function refPage(kind){let title,lead,body;
+  if(kind==='errors'){title='Common errors';lead='Copy the first line of your error and search for it here. Each card says what it means and how to fix it.';
+    body=`<input class="rfilter" id="rf" type="search" placeholder="Search errors, e.g. rejected, upstream, 404" aria-label="Search errors"><div class="errs" id="rl">${ERRORS.map(([e,m,f])=>`<article class="err" data-k="${esc((e+' '+m+' '+f).toLowerCase())}"><code>${esc(e)}</code><p><b>What it means:</b> ${esc(m)}</p><p class="fix"><b>Fix:</b> ${esc(f)}</p></article>`).join('')}</div><p class="empty" id="rnone" hidden>No match. Try one word from the error, or paste it into your AI tool with "explain this Git error".</p>`;}
+  else if(kind==='glossary'){title='Glossary';lead='Every Git and GitHub word in this book, in plain English.';
+    body=`<input class="rfilter" id="rf" type="search" placeholder="Search a word" aria-label="Search the glossary"><dl class="gloss" id="rl">${GLOSS.map(([t,d])=>`<div data-k="${esc((t+' '+d).toLowerCase())}"><dt>${esc(t)}</dt><dd>${esc(d)}</dd></div>`).join('')}</dl><p class="empty" id="rnone" hidden>No match.</p>`;}
+  else{title='VS Code and Cursor buttons';lead='Prefer clicking? Every command in this book has a button in the Source Control panel of VS Code and Cursor. Learn the command, then use whichever is faster.';
+    body=`<div class="tbl" style="max-width:60rem"><table><thead><tr><th>Task</th><th>Command</th><th>In VS Code / Cursor</th></tr></thead><tbody>${GUI.map(([t,c,g])=>`<tr><th>${esc(t)}</th><td><code>${esc(c)}</code></td><td>${esc(g)}</td></tr>`).join('')}</tbody></table></div>
+    <div class="note"><b>Tip:</b> the Source Control panel shows the same states as <code>git status</code>: <b>U</b> untracked, <b>M</b> modified, <b>A</b> added (staged), <b>D</b> deleted, <b>C</b> conflict.</div>
+    <p class="lead" style="font-size:1rem">GitHub Desktop is a free standalone app with the same buttons, if you don't use VS Code or Cursor.</p>`;}
+  $('#main').innerHTML=`<div class="read"><p class="eyebrow">Reference</p><h1>${title}</h1><p class="lead">${lead}</p></div>${body}${footer()}`;
+  labelTables();const f=$('#rf');if(f)f.oninput=()=>{const q=f.value.trim().toLowerCase();let n=0;document.querySelectorAll('#rl [data-k]').forEach(el=>{const ok=!q||el.dataset.k.includes(q);el.hidden=!ok;if(ok)n++;});$('#rnone').hidden=n>0;};}
+
+/* ===== Certificate ===== */
+function capDone(){const c=CH.find(x=>x.id==='capstone');return doneCount('capstone')===c.lab.missions.length;}
+function certHTML(){const name=P.name||'';const d=P.certDate||new Date().toISOString().slice(0,10);
+  return `<section class="certwrap" aria-labelledby="cth"><h2 id="cth">Your certificate</h2><p class="lead" style="font-size:1rem">You finished the capstone. Type your name to put it on the certificate.</p>
+  <div class="certname"><input id="cname" value="${esc(name)}" placeholder="Your name" aria-label="Name on the certificate" maxlength="40"></div>
+  <div class="cert" id="cert"><div class="cbar"></div><p class="ck">Certificate of completion</p><p class="cn" id="cnout">${esc(name||'Your name')}</p><p class="cw">has completed <b>Git for Vibe Coders</b>, the interactive Git and GitHub course with ${TOTAL} hands-on missions, including the capstone project.</p><div class="cfoot"><span>${new Date(d).toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'})}</span><span>${esc(AUTHOR.brand)}</span></div></div>
+  <div class="certact"><button class="btn primary" type="button" id="cshare">Copy share text</button>${shareUrl()?`<a class="btn" href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl())}" target="_blank" rel="noopener">Share on LinkedIn</a>`:''}${canDownload()?'<button class="btn" type="button" id="cdl">Download image</button>':''}</div><p class="empty" id="cmsg"></p></section>`;}
+function shareUrl(){return /^https?:/.test(location.protocol)&&/github\.io$/.test(location.hostname)?location.href.split('#')[0]:'';}
+function canDownload(){return location.protocol==='file:'||/github\.io$/.test(location.hostname);}
+function wireCert(){if(!$('#cert'))return;if(!P.certDate){P.certDate=new Date().toISOString().slice(0,10);saveP();}
+  $('#cname').oninput=e=>{P.name=e.target.value;saveP();$('#cnout').textContent=P.name||'Your name';};
+  $('#cshare').onclick=()=>{const t=`I just completed "Git for Vibe Coders" by ${AUTHOR.brand}: an interactive Git and GitHub course with hands-on labs. Now I can build with AI without losing my work. ${shareUrl()}`.trim();const ok=()=>{$('#cmsg').textContent='Copied. Paste it into your post.';};try{navigator.clipboard.writeText(t).then(ok,()=>{$('#cmsg').textContent=t;});}catch(e){$('#cmsg').textContent=t;}};
+  const dl=$('#cdl');if(dl)dl.onclick=()=>{const c=document.createElement('canvas');c.width=1600;c.height=1000;const x=c.getContext('2d');const css=getComputedStyle(document.documentElement);
+    x.fillStyle='#ffffff';x.fillRect(0,0,1600,1000);x.fillStyle='#d4481e';x.fillRect(0,0,1600,18);x.strokeStyle='#d3d9e0';x.lineWidth=4;x.strokeRect(40,58,1520,900);
+    x.fillStyle='#b03a14';x.font='600 34px "IBM Plex Sans",sans-serif';x.textAlign='center';x.fillText('CERTIFICATE OF COMPLETION',800,230);
+    x.fillStyle='#18212d';x.font='800 110px Archivo,sans-serif';x.fillText(P.name||'Your name',800,400);
+    x.fillStyle='#566271';x.font='400 38px "IBM Plex Sans",sans-serif';x.fillText('has completed Git for Vibe Coders,',800,520);x.fillText('the interactive Git and GitHub course with hands-on labs.',800,575);
+    x.font='500 32px "IBM Plex Sans",sans-serif';x.fillText(new Date(P.certDate).toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'})+'   ·   '+AUTHOR.brand,800,820);
+    const a=document.createElement('a');a.href=c.toDataURL('image/png');a.download='git-for-vibe-coders-certificate.png';document.body.appendChild(a);a.click();a.remove();};}
 
 /* ===== State & storage ===== */
 const LS='gitvibe-book-v1';
@@ -1337,12 +1715,15 @@ const $=s=>document.querySelector(s);
 const TOTAL=CH.reduce((n,c)=>n+c.lab.missions.length,0);
 function doneCount(id){return (P.m[id]||[]).length;}
 const SETUP=CH.find(c=>c.setup);
-function checkDone(){const l=SETUP.checklist[P.os],s=P.c[P.os]||[];return [s.filter(i=>i<l.length).length,l.length];}
+function ckKey(ch){return Array.isArray(ch.checklist)?ch.id:P.os;}
+function ckList(ch){return Array.isArray(ch.checklist)?ch.checklist:ch.checklist[P.os];}
+function checkDone(ch){ch=ch||SETUP;const l=ckList(ch),s=P.c[ckKey(ch)]||[];return [s.filter(i=>i<l.length).length,l.length];}
 
 /* ===== Navigation ===== */
 function renderRail(cur){let h='<h6>Start</h6>'+`<a href="#home" class="${cur==='home'?'on':''}"><span class="n">↳</span><span>How this book works</span><span></span></a>`;
-  CH.forEach(c=>{if(c.id==='ch1')h+='<h6>Chapters</h6>';if(c.id==='capstone')h+='<h6>Finish</h6>';if(c.id==='sandbox')h+='<h6>Practice</h6>';let t=c.lab.missions.length,d=doneCount(c.id);if(c.setup)[d,t]=checkDone();h+=`<a href="#${c.id}" class="${cur===c.id?'on':''}"><span class="n">${c.n}</span><span>${esc(c.title)}</span><span class="c ${t&&d===t?'full':''}">${t?`${d}/${t}`:''}</span></a>`;});
-  h+=`<a href="#cheatsheet" class="${cur==='cheatsheet'?'on':''}"><span class="n">≡</span><span>Cheat sheet</span><span></span></a>`;
+  CH.forEach(c=>{if(c.id==='ch1')h+='<h6>Chapters</h6>';if(c.id==='ch12')h+='<h6>Go further</h6>';if(c.id==='capstone')h+='<h6>Finish</h6>';if(c.id==='sandbox')h+='<h6>Practice</h6>';let t=c.lab.missions.length,d=doneCount(c.id);if(c.checklist)[d,t]=checkDone(c);h+=`<a href="#${c.id}" class="${cur===c.id?'on':''}"><span class="n">${c.n}</span><span>${esc(c.title)}</span><span class="c ${t&&d===t?'full':''}">${t?`${d}/${t}`:''}</span></a>`;});
+  h+='<h6>Reference</h6>'+[['cheatsheet','≡','Cheat sheet'],['errors','!','Common errors'],['glossary','A','Glossary'],['gui','▣','VS Code and Cursor buttons']].map(([id,n,t])=>`<a href="#${id}" class="${cur===id?'on':''}"><span class="n">${n}</span><span>${t}</span><span></span></a>`).join('');
+  h+=`<p class="rauthor">By ${esc(AUTHOR.name)} · ${esc(AUTHOR.brand)}<br>${authorLinks()}</p>`;
   h+='<button class="reset" id="resetall">Reset all progress</button>';
   $('#rail').innerHTML=h;
   $('#resetall').onclick=e=>{const b=e.currentTarget;if(b.dataset.armed){P={m:{},q:{},c:{},os:P.os};saveP();Object.keys(SIM).forEach(k=>delete SIM[k]);route();}else{b.dataset.armed='1';b.textContent='Click again to erase all ticks and quiz answers';setTimeout(()=>{if(b.isConnected){delete b.dataset.armed;b.textContent='Reset all progress';}},4000);}};
@@ -1351,19 +1732,20 @@ $('#navbtn').onclick=()=>{const r=$('#rail');const o=r.classList.toggle('open');
 $('#rail').addEventListener('click',e=>{if(e.target.closest('a')){$('#rail').classList.remove('open');$('#navbtn').setAttribute('aria-expanded','false');}});
 
 function route(){const id=(location.hash||'#home').slice(1);const ch=CH.find(c=>c.id===id);
-  if(ch)renderChapter(ch);else if(id==='cheatsheet')renderCheat();else renderHome();
-  renderRail(ch?ch.id:(id==='cheatsheet'?'cheatsheet':'home'));window.scrollTo(0,0);}
+  const refs=['errors','glossary','gui'];
+  if(ch)renderChapter(ch);else if(id==='cheatsheet')renderCheat();else if(refs.includes(id))refPage(id);else renderHome();
+  renderRail(ch?ch.id:(id==='cheatsheet'||refs.includes(id)?id:'home'));window.scrollTo(0,0);}
 window.addEventListener('hashchange',route);
 
 /* ===== Home ===== */
 function renderHome(){const next=CH.find(c=>c.lab.missions.length&&doneCount(c.id)<c.lab.missions.length)||CH[0];
   $('#main').innerHTML=`<section class="hero"><p class="eyebrow">An interactive book</p><h1>Git for <em>Vibe Coders</em></h1>
-  <p class="lead">Learn the Git and GitHub you need to build with AI without losing work. Every chapter ends with a live terminal where you practise the real commands, with missions that check themselves.</p>
-  <div class="cta"><a class="btn primary" href="#${next.id}">${doneCount(next.id)||next!==CH[0]?'Continue':'Start'}: ${esc(next.title)}</a><a class="btn" href="#setup">First time? Set up your computer</a><a class="btn" href="#sandbox">Open the sandbox</a></div></section>
+  <p class="byline">By <b>${esc(AUTHOR.name)}</b> · ${esc(AUTHOR.brand)}</p><p class="lead">Learn the Git and GitHub you need to build with AI without losing work. Every chapter ends with a live terminal where you practise the real commands, with missions that check themselves.</p>
+  <div class="cta"><a class="btn primary" href="#${next.id}">${doneCount(next.id)||next!==CH[0]?'Continue':'Start'}: ${esc(next.title)}</a>${capDone()?'<a class="btn" href="#capstone">View your certificate</a>':''}<a class="btn" href="#setup">First time? Set up your computer</a><a class="btn" href="#sandbox">Open the sandbox</a></div></section>
   <div class="how"><div><span class="tag">1 · Read</span><b>A short lesson</b><p>Five to ten minutes. Click any command in it to paste it into the lab.</p></div><div><span class="tag">2 · Practise</span><b>A live Git lab</b><p>A safe terminal with a shop app, a pretend AI and a pretend GitHub. Missions tick themselves.</p></div><div><span class="tag">3 · Check</span><b>A quick quiz</b><p>Three or four questions with the reason behind each answer.</p></div></div>
   <div class="demo"><div class="term"><div class="tbar"><span class="dots"><i></i><i></i><i></i></span><span class="grow">a taste of the lab</span></div><div class="tout" id="demo"></div></div></div>
-  <h2>Chapters</h2><div class="chgrid">${CH.map(c=>{let t=c.lab.missions.length,d=doneCount(c.id);if(c.setup)[d,t]=checkDone();return `<a class="chcard" href="#${c.id}"><span class="n">${typeof c.n==='number'?'Chapter '+c.n:c.id==='capstone'?'Capstone':'Free play'}${t?` · ${d}/${t} ${c.setup?'steps':'missions'}`:''}</span><b>${esc(c.title)}</b><p>${esc(c.blurb)}</p>${t?`<div class="bar"><i style="width:${d/t*100}%"></i></div>`:''}</a>`;}).join('')}</div>
-  <p class="honest">The lab is a simulator that behaves like real Git and the GitHub CLI for every command in this book. Nothing touches your real files or your real GitHub account. Your ticks and quiz answers are saved in this browser only.</p>`;
+  <h2>Chapters</h2><div class="chgrid">${CH.map(c=>{let t=c.lab.missions.length,d=doneCount(c.id);if(c.checklist)[d,t]=checkDone(c);return `<a class="chcard" href="#${c.id}"><span class="n">${typeof c.n==='number'?'Chapter '+c.n:c.id==='capstone'?'Capstone':c.id==='real'?'Final step':'Free play'}${t?` · ${d}/${t} ${c.checklist?'steps':'missions'}`:''}</span><b>${esc(c.title)}</b><p>${esc(c.blurb)}</p>${t?`<div class="bar"><i style="width:${d/t*100}%"></i></div>`:''}</a>`;}).join('')}</div>
+  <p class="honest">The lab is a simulator that behaves like real Git and the GitHub CLI for every command in this book. Nothing touches your real files or your real GitHub account. Your ticks and quiz answers are saved in this browser only.</p>${footer()}`;
   const S=base();const lines=[];['git init','git add . && git commit -m "Initial commit"','ai "redesign everything"','test','git restore . && git clean -fd','test'].forEach(c=>{lines.push([`<span class="ps">$</span> ${esc(c)}`,'cmd html']);run(S,c,true).forEach(l=>lines.push(l));});
   $('#demo').innerHTML=lines.map(lineHTML).join('');}
 
@@ -1373,17 +1755,19 @@ function renderCheat(){const rows=[['Setup, once',[['git config --global user.na
  ['Daily loop',[['git pull','Start of the day'],['git status','What changed?'],['git diff','See the changes'],['git add .','Stage everything'],['git commit -m "Add login page"','Save'],['git push','Upload']]],
  ['Undo',[['git restore <file>','Undo one file'],['git restore .','Undo all uncommitted edits'],['git clean -n / git clean -fd','Preview / delete new junk files'],['git reset --soft HEAD~1','Undo last commit, keep work'],['git revert <id>','Undo a pushed commit safely'],['git reset --hard <id>','Go back, lose later work (careful)'],['git reflog','Find "lost" commits'],['git stash / git stash pop','Park / restore work']]],
  ['Branches',[['git branch','List'],['git switch -c <name>','Create and move'],['git switch main','Go back'],['git merge <name>','Merge into current'],['git branch -D <name>','Delete']]],
- ['GitHub',[['git push -u origin <branch>','Upload a branch'],['gh issue create --title "..."','New issue'],['gh pr create --fill','Open a pull request'],['gh pr merge --squash --delete-branch','Merge it'],['git merge --abort','Cancel a bad merge']]]];
+ ['GitHub',[['git push -u origin <branch>','Upload a branch'],['gh issue create --title "..."','New issue'],['gh pr create --fill','Open a pull request'],['gh pr merge --squash --delete-branch','Merge it'],['git merge --abort','Cancel a bad merge']]],
+ ['Versions and publishing',[['git tag v1.0','Name the current commit'],['git push --tags','Upload tags'],['gh release create v1.0 --notes "..."','Publish a release'],['gh repo edit --visibility public --accept-visibility-change-consequences','Make a repo public'],['Settings → Pages → main → / (root) → Save','Turn on GitHub Pages']]]];
   $('#main').innerHTML=`<div class="read"><p class="eyebrow">Reference</p><h1>Cheat sheet</h1><p class="lead">Everything from the book on one page. Pin it or keep it open in a tab.</p></div>
-  ${rows.map(([t,r])=>`<h3>${t}</h3><div class="tbl" style="max-width:52rem"><table><tbody>${r.map(([c,d])=>`<tr><td style="width:58%"><code>${esc(c)}</code></td><td>${esc(d)}</td></tr>`).join('')}</tbody></table></div>`).join('')}`;}
+  ${rows.map(([t,r])=>`<h3>${t}</h3><div class="tbl" style="max-width:52rem"><table><tbody>${r.map(([c,d])=>`<tr><td style="width:58%"><code>${esc(c)}</code></td><td>${esc(d)}</td></tr>`).join('')}</tbody></table></div>`).join('')}${footer()}`;}
 
 /* ===== Chapter ===== */
-function renderChapter(ch){if(ch.setup)return renderSetup(ch);const t=ch.lab.missions.length;const idx=CH.indexOf(ch),prev=CH[idx-1],next=CH[idx+1];
+function renderChapter(ch){if(ch.checklist)return renderSetup(ch);const t=ch.lab.missions.length;const idx=CH.indexOf(ch),prev=CH[idx-1],next=CH[idx+1];
   const eyebrow=typeof ch.n==='number'?`Chapter ${ch.n} · ${ch.mins} min read · ${t} missions`:ch.id==='capstone'?`Capstone · about ${ch.mins} minutes · ${t} goals`:'Free play';
   $('#main').innerHTML=`<article>
   <header class="read"><p class="eyebrow">${eyebrow}</p><h1>${esc(ch.title)}</h1><p class="lead">${esc(ch.lead)}</p></header>
   <section class="read lesson">${ch.lesson}</section>
   <section class="lab" id="lab" aria-labelledby="labh"><div class="lab-head"><h2 id="labh">${ch.id==='sandbox'?'Playground':'Practice lab'}</h2><p>${ch.lab.intro}</p></div>
+   ${labBasics(ch)}
    <div class="labgrid" ${t?'':'style="grid-template-columns:minmax(0,1fr)"'}>
     ${t?`<aside class="missions" aria-label="Missions"><div id="mlist"></div></aside>`:''}
     <div class="bench">
@@ -1393,8 +1777,9 @@ function renderChapter(ch){if(ch.setup)return renderSetup(ch);const t=ch.lab.mis
      <div class="panels"><div class="tabs" role="tablist"><button role="tab" data-tab="files" id="tb-files">Files</button><button role="tab" data-tab="graph" id="tb-graph">History</button><button role="tab" data-tab="gh" id="tb-gh">GitHub</button></div><div class="pane" id="pane" role="tabpanel"></div></div>
     </div></div></section>
   ${ch.quiz.length?`<section class="quiz" aria-labelledby="qh"><h2 id="qh">Check yourself</h2><p>Pick an answer to see if you are right and why.</p><div id="qz"></div></section>`:''}
-  <nav class="pager">${prev?`<a href="#${prev.id}"><small>Previous</small>${esc(prev.title)}</a>`:'<span></span>'}${next?`<a class="nx" href="#${next.id}"><small>Next</small>${esc(next.title)}</a>`:`<a class="nx" href="#cheatsheet"><small>Next</small>Cheat sheet</a>`}</nav></article>`;
-  enhanceLesson();mountLab(ch);if(ch.quiz.length)renderQuiz(ch);}
+  <nav class="pager">${prev?`<a href="#${prev.id}"><small>Previous</small>${esc(prev.title)}</a>`:'<span></span>'}${next?`<a class="nx" href="#${next.id}"><small>Next</small>${esc(next.title)}</a>`:`<a class="nx" href="#cheatsheet"><small>Next</small>Cheat sheet</a>`}</nav></article>${footer()}`;
+  enhanceLesson();mountLab(ch);if(ch.quiz.length)renderQuiz(ch);if(ch.id==='capstone')showCert();}
+function showCert(){const old=$('#certslot');if(old)old.remove();if(!capDone())return;const lab=$('#lab');const d=document.createElement('div');d.id='certslot';d.innerHTML=certHTML();lab.after(d);wireCert();}
 
 const CMDRE=/^(git|gh|echo|ai|test|ls|cat|nano|github|touch|rm)\b/;
 function labelTables(){document.querySelectorAll('.tbl table').forEach(t=>{const hs=[...t.querySelectorAll('thead th')].map(h=>h.textContent.trim());t.querySelectorAll('tbody tr').forEach(tr=>[...tr.children].forEach((c,i)=>{if(c.tagName==='TD'&&hs[i]!==undefined)c.dataset.label=hs[i];}));});}
@@ -1405,21 +1790,37 @@ function enhanceLesson(){labelTables();document.querySelectorAll('.lesson code')
 function paste(v){const i=$('#tin');if(!i)return;i.value=v;$('#lab').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});setTimeout(()=>{i.focus();i.setSelectionRange(v.length,v.length);},250);}
 
 function renderSetup(ch){const idx=CH.indexOf(ch),next=CH[idx+1];
-  $('#main').innerHTML=`<article><header class="read"><p class="eyebrow">Chapter 0 · about ${ch.mins} minutes · do this once</p><h1>${esc(ch.title)}</h1><p class="lead">${esc(ch.lead)}</p></header>
+  $('#main').innerHTML=`<article><header class="read"><p class="eyebrow">${ch.setup?`Chapter 0 · about ${ch.mins} minutes · do this once`:`Final step · about ${ch.mins} minutes · on your own computer`}</p><h1>${esc(ch.title)}</h1><p class="lead">${esc(ch.lead)}</p></header>
   <section class="read lesson">${ch.lesson}</section>
-  <section class="lab" aria-labelledby="ckh"><div class="lab-head"><h2 id="ckh">Your setup checklist</h2><p>Tick each step as you finish it on your own computer. Your ticks are saved in this browser.</p></div><div class="checks" id="checks"></div></section>
-  <section class="quiz" aria-labelledby="qh"><h2 id="qh">Check yourself</h2><p>Pick an answer to see if you are right and why.</p><div id="qz"></div></section>
-  <nav class="pager"><span></span><a class="nx" href="#${next.id}"><small>Next</small>${esc(next.title)}</a></nav></article>`;
+  <section class="lab" aria-labelledby="ckh"><div class="lab-head"><h2 id="ckh">${ch.setup?'Your setup checklist':'Your real-project checklist'}</h2><p>Tick each step as you finish it on your own computer. Your ticks are saved in this browser.</p></div><div class="checks" id="checks"></div></section>
+  ${ch.quiz.length?`<section class="quiz" aria-labelledby="qh"><h2 id="qh">Check yourself</h2><p>Pick an answer to see if you are right and why.</p><div id="qz"></div></section>`:''}
+  <nav class="pager">${CH[idx-1]?`<a href="#${CH[idx-1].id}"><small>Previous</small>${esc(CH[idx-1].title)}</a>`:'<span></span>'}<a class="nx" href="#${next.id}"><small>Next</small>${esc(next.title)}</a></nav></article>${footer()}`;
   document.querySelectorAll('.lesson pre').forEach(pre=>{const txt=pre.textContent.replace(/\n$/,'');const w=document.createElement('div');w.className='prewrap';pre.parentNode.insertBefore(w,pre);w.appendChild(pre);const b=document.createElement('button');b.type='button';b.className='copy';b.textContent='Copy';w.appendChild(b);
     b.onclick=()=>{const done=()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1500);};const sel=()=>{const r=document.createRange();r.selectNodeContents(pre);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected: press Ctrl+C';setTimeout(()=>b.textContent='Copy',2500);};try{navigator.clipboard.writeText(txt).then(done,sel);}catch(e){sel();}};});
-  labelTables();applyOS(ch);renderQuiz(ch);}
+  labelTables();applyOS(ch);if(ch.quiz.length)renderQuiz(ch);}
 function applyOS(ch){document.querySelectorAll('.osbar button').forEach(b=>{b.setAttribute('aria-selected',b.dataset.os===P.os);b.onclick=()=>{P.os=b.dataset.os;saveP();applyOS(ch);renderRail(ch.id);};});
   document.querySelectorAll('.lesson [data-os]').forEach(el=>{if(el.tagName==='BUTTON')return;el.hidden=el.dataset.os!==P.os;});
-  const list=ch.checklist[P.os],s=P.c[P.os]||(P.c[P.os]=[]);const [d,t]=checkDone();
-  $('#checks').innerHTML=`<div class="mhead"><b>${P.os==='mac'?'Mac':'Windows'} setup</b><span>${d} of ${t} done</span></div><div class="bar"><i style="width:${d/t*100}%"></i></div><ul class="cklist">${list.map((x,i)=>`<li><label><input type="checkbox" id="ck-${P.os}-${i}" ${s.includes(i)?'checked':''}><span>${esc(x)}</span></label></li>`).join('')}</ul>${d===t?'<div class="labdone">Your computer is ready. Start Chapter 1.</div>':''}`;
-  list.forEach((x,i)=>{$('#ck-'+P.os+'-'+i).onchange=e=>{const arr=P.c[P.os];const k=arr.indexOf(i);if(e.target.checked&&k<0)arr.push(i);if(!e.target.checked&&k>=0)arr.splice(k,1);saveP();applyOS(ch);renderRail(ch.id);};});}
+  const K=ckKey(ch),list=ckList(ch),s=P.c[K]||(P.c[K]=[]);const [d,t]=checkDone(ch);
+  $('#checks').innerHTML=`<div class="mhead"><b>${ch.setup?(P.os==='mac'?'Mac setup':'Windows setup'):'Real project'}</b><span>${d} of ${t} done</span></div><div class="bar"><i style="width:${d/t*100}%"></i></div><ul class="cklist">${list.map((x,i)=>`<li><label><input type="checkbox" id="ck-${K}-${i}" ${s.includes(i)?'checked':''}><span>${esc(x)}</span></label></li>`).join('')}</ul>${d===t?`<div class="labdone">${ch.setup?'Your computer is ready. Start Chapter 1.':'Your real project is safe on GitHub. You are a Git-confident vibe coder now.'}</div>`:''}`;
+  list.forEach((x,i)=>{$('#ck-'+K+'-'+i).onchange=e=>{const arr=P.c[K];const k=arr.indexOf(i);if(e.target.checked&&k<0)arr.push(i);if(!e.target.checked&&k>=0)arr.splice(k,1);saveP();applyOS(ch);renderRail(ch.id);};});}
 
 /* ===== Lab ===== */
+function labBasics(ch){const open=ch.id==='ch1'||ch.id==='sandbox'||!(P.m.ch1||[]).length;
+  return `<details class="basics" ${open?'open':''}><summary>How the practice lab works <span>read this first</span></summary><div class="bgrid">
+  <div><h4>The terminal</h4><ul><li>Type a command and press <b>Enter</b>. The round buttons above the input type common commands for you.</li><li><b>↑</b> brings back your last command.</li><li>Click any grey command in the lesson or a mission to paste it, then press Enter.</li><li>Below the terminal: <b>Files</b> (open and edit files), <b>History</b> (your commits) and <b>GitHub</b> (what is online).</li></ul></div>
+  <div><h4>Terminal basics</h4><div class="tbl"><table><tbody>
+  <tr><td><code>ls</code></td><td>List files in the folder</td></tr>
+  <tr><td><code>cat index.html</code></td><td>Show what is inside a file</td></tr>
+  <tr><td><code>echo "hi" &gt; a.txt</code></td><td>Write text into a file (replaces it)</td></tr>
+  <tr><td><code>echo "hi" &gt;&gt; a.txt</code></td><td>Add a line to the end of a file</td></tr>
+  <tr><td><code>A &amp;&amp; B</code></td><td>Run A, then B if A worked</td></tr>
+  <tr><td><code>"line 1&#92;nline 2"</code></td><td>&#92;n inside quotes starts a new line</td></tr></tbody></table></div></div>
+  <div><h4>Practice helpers</h4><p class="bnote">These exist only in this playground, so you can practise safely.</p><div class="tbl"><table><tbody>
+  <tr><td><code>ai "add a cart"</code></td><td>A pretend AI edits your files. Prompts with "redesign" or "everything" break the app on purpose.</td></tr>
+  <tr><td><code>test</code></td><td>Checks whether the shop app works</td></tr>
+  <tr><td><code>github edit file "text"</code></td><td>A pretend teammate changes a file on GitHub</td></tr>
+  <tr><td><code>help</code></td><td>Lists every command you can use</td></tr></tbody></table></div></div>
+  </div></details>`;}
 let CUR=null;
 function mountLab(ch){CUR=ch;const sm=sim(ch);const out=$('#tout');out.innerHTML=sm.lines.map(lineHTML).join('');out.scrollTop=out.scrollHeight;
   renderMissions(ch);renderPanels(ch);setPrompt(ch);
@@ -1439,12 +1840,14 @@ function setPrompt(ch){const S=sim(ch).S,r=S.repo;const b=r?(r.detached?`(${r.de
 
 function renderMissions(ch){const el=$('#mlist');if(!el)return;const ms=ch.lab.missions,done=P.m[ch.id]||[];const n=done.length;const nextI=ms.findIndex((m,i)=>!done.includes(i));const sm=sim(ch);sm.open=sm.open||{};
   el.parentElement.classList.toggle('all',!!sm.all||nextI<0);
-  el.innerHTML=`<div class="mhead"><b>${ch.id==='capstone'?'Goals':'Missions'}</b><span>${n} of ${ms.length} done</span></div><div class="bar"><i style="width:${n/ms.length*100}%"></i></div>
+  const G=GUIDE[ch.id];const guided=!!G&&P.guided!==false;
+  el.innerHTML=`<div class="mhead"><b>${ch.id==='capstone'?'Goals':'Missions'}</b><span>${n} of ${ms.length} done</span></div><div class="bar"><i style="width:${n/ms.length*100}%"></i></div>${G?`<div class="mode" role="group" aria-label="Mission mode"><button type="button" data-g="1" aria-pressed="${guided}">Guided</button><button type="button" data-g="0" aria-pressed="${!guided}">Challenge</button></div><p class="modehint">${guided?'Each mission shows why, what to type and what you should see.':'Commands are hidden. Use Show hint if you get stuck.'}</p>`:''}
   <ol>${ms.map((m,i)=>{const d=done.includes(i);const open=sm.open[i];return `<li class="mi ${d?'done':''} ${i===nextI?'next':''}"><span class="mk" aria-hidden="true"></span><div><p class="mt">${esc(m.t)}${d?'<span class="sr" style="position:absolute;left:-9999px"> (done)</span>':''}</p>
-   <button class="hintbtn" data-i="${i}" aria-expanded="${!!open}">${open?'Hide hint':'Show hint'}</button>
-   <div class="hints" ${open?'':'hidden'}>${m.hint.map(h=>`<code data-cmd="${esc(h)}" tabindex="0" title="Click to paste into the terminal">${esc(h)}</code>`).join('')}${m.note?`<small>${esc(m.note)}</small>`:''}</div></div></li>`;}).join('')}</ol>
+   ${guided?`<p class="gwhy">${esc(G[i][0])}</p>`:`<button class="hintbtn" data-i="${i}" aria-expanded="${!!open}">${open?'Hide hint':'Show hint'}</button>`}
+   <div class="hints" ${open||guided?'':'hidden'}>${guided?'<small class="glab">Type</small>':''}${m.hint.map(h=>`<code data-cmd="${esc(h)}" tabindex="0" title="Click to paste into the terminal">${esc(h)}</code>`).join('')}${m.note?`<small>${esc(m.note)}</small>`:''}${guided?`<small class="gsee"><b>You should see:</b> ${esc(G[i][1])}</small>`:''}</div></div></li>`;}).join('')}</ol>
   <button class="btn mtoggle" type="button" id="mtog">${sm.all?'Show only the next mission':`Show all ${ms.length} missions`}</button>
   ${n===ms.length?`<div class="labdone">${ch.id==='capstone'?'Capstone complete. You ship like a professional now.':'Lab complete. Try the quiz below.'}</div>`:''}`;
+  el.querySelectorAll('.mode button').forEach(bt=>bt.onclick=()=>{P.guided=bt.dataset.g==='1';saveP();renderMissions(ch);});
   const tg=$('#mtog');if(tg){if(nextI<0)tg.hidden=true;tg.onclick=()=>{sm.all=!sm.all;renderMissions(ch);};}
   el.querySelectorAll('.hintbtn').forEach(b=>b.onclick=()=>{const i=+b.dataset.i;sm.open[i]=!sm.open[i];renderMissions(ch);});
   el.querySelectorAll('.hints code').forEach(c=>{const f=()=>{const v=c.dataset.cmd;const i=$('#tin');i.value=v;i.focus();};c.onclick=f;c.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();f();}};});}
@@ -1452,7 +1855,7 @@ function checkMissions(ch){const S=sim(ch).S;const done=P.m[ch.id]||(P.m[ch.id]=
   ch.lab.missions.forEach((m,i)=>{if(done.includes(i))return;let ok=false;try{ok=!!m.check(S);}catch(e){}if(ok){done.push(i);fresh.push(i);}});
   if(!fresh.length)return;saveP();renderMissions(ch);renderRail(ch.id);
   print(ch,fresh.map(i=>[`✔ Mission ${i+1} done: ${ch.lab.missions[i].t}`,'mission']));
-  if(done.length===ch.lab.missions.length)print(ch,[[ch.id==='capstone'?'★ Capstone complete!':'★ Every mission done. The quiz is below.','mission']]);}
+  if(done.length===ch.lab.missions.length){print(ch,[[ch.id==='capstone'?'★ Capstone complete! Your certificate is below the lab.':'★ Every mission done. The quiz is below.','mission']]);if(ch.id==='capstone')showCert();}}
 
 /* ===== Panels ===== */
 function fileState(S,f){if(!S.repo)return ['no Git yet',''];const r=S.repo,H=headTree(S),I=r.index,W=S.files;
@@ -1463,7 +1866,8 @@ function fileState(S,f){if(!S.repo)return ['no Git yet',''];const r=S.repo,H=hea
   if(staged&&mod)return ['staged + edited','both'];if(staged)return [H[f]===undefined?'new, staged':'staged','staged'];if(mod)return ['modified','mod'];return ['saved',''];}
 function renderPanels(ch){const sm=sim(ch),S=sm.S;['files','graph','gh'].forEach(t=>{const b=$('#tb-'+t);if(b)b.setAttribute('aria-selected',sm.tab===t);});const p=$('#pane');if(!p)return;
   if(sm.tab==='graph'){p.innerHTML=graphHTML(S);return;}
-  if(sm.tab==='gh'){p.innerHTML=ghHTML(S);return;}
+  if(sm.tab==='gh'){p.innerHTML=ghHTML(S);const on=$('#pgon');if(on)on.onclick=()=>{const e=enablePages(S);print(ch,[[e?e:`Settings → Pages saved. Your site is live at ${pagesUrl(S)}`,e?'err':'ok']]);renderPanels(ch);checkMissions(ch);};
+    const v=$('#pgview');if(v)v.onclick=()=>{const T=tr(S,S.gh.pages.deployed);S.events.push('pagesVisit');const fr=document.createElement('iframe');fr.className='pgframe';fr.title='Preview of your live site';fr.setAttribute('sandbox','');fr.srcdoc=T['index.html']===undefined?'<h1 style="font-family:sans-serif">404</h1><p style="font-family:sans-serif">There isn\'t a GitHub Pages site here.</p>':`<style>${T['style.css']||''}</style>${T['index.html']}`;const box=$('#pgframe');box.innerHTML=`<p class="legend">${esc(pagesUrl(S))}</p>`;box.appendChild(fr);checkMissions(ch);};return;}
   if(sm.edit!==undefined&&sm.edit!==null&&S.files[sm.edit]!==undefined){const f=sm.edit;p.innerHTML=`<div class="editor"><div class="edhead"><b>${esc(f)}</b><span>Edit like in your code editor, then Save.</span></div><textarea id="edta" spellcheck="false" aria-label="Contents of ${esc(f)}">${esc(S.files[f])}</textarea><div class="edact"><button class="btn primary" id="edsave" type="button">Save file</button><button class="btn" id="edclose" type="button">Close</button><button class="btn" id="eddel" type="button">Delete file</button></div></div>`;
     $('#edsave').onclick=()=>{S.files[f]=$('#edta').value.replace(/\r/g,'');S.events.push('edit:'+f);print(ch,[[`(saved ${f})`,'dim']]);sm.edit=null;renderPanels(ch);checkMissions(ch);};
     $('#edclose').onclick=()=>{sm.edit=null;renderPanels(ch);};
@@ -1492,6 +1896,9 @@ function ghHTML(S){if(!S.gh)return `<p class="empty">Nothing on GitHub yet. ${S.
   h+='<h4>Branches on GitHub</h4>'+(bs.length?'<ul class="ghl">'+bs.map(b=>{const c=S.objs[g.branches[b]];const l=S.repo&&S.repo.branches[b];const st=!l?'<span class="st">not on your computer</span>':l===g.branches[b]?'<span class="st ok">in sync</span>':isAnc(S,g.branches[b],l)?'<span class="st warn">your computer is ahead</span>':isAnc(S,l,g.branches[b])?'<span class="st warn">GitHub is ahead</span>':'<span class="st bad">diverged</span>';return `<li><code>${esc(b)}</code><span class="m">${c.id} ${esc(c.msg.split('\n')[0])}</span>${st}</li>`;}).join('')+'</ul>':'<p class="empty">No branches pushed yet.</p>');
   if(S.issues.length)h+='<h4>Issues</h4><ul class="ghl">'+S.issues.map(i=>`<li><span class="st ${i.open?'ok':''}">${i.open?'Open':'Closed'}</span><span class="m">#${i.n} ${esc(i.title)}</span></li>`).join('')+'</ul>';
   if(S.prs.length)h+='<h4>Pull requests</h4><ul class="ghl">'+S.prs.map(p=>`<li><span class="st ${p.state==='open'?'ok':'merged'}">${p.state==='open'?'Open':'Merged'}</span><span class="m">#${p.n} ${esc(p.title)} <small>${esc(p.branch)} → main</small></span></li>`).join('')+'</ul>';
+  const gt=Object.keys(g.tags||{});if(gt.length||S.releases.length)h+='<h4>Tags and releases</h4><ul class="ghl">'+gt.map(t=>{const rl=S.releases.find(x=>x.tag===t);return `<li><code>${esc(t)}</code><span class="m">${rl?esc(rl.notes||rl.title):'tag only'}</span>${rl?'<span class="st ok">Release</span>':''}</li>`;}).join('')+'</ul>';
+  h+='<h4>GitHub Pages</h4>';if(!g.pages){h+=g.private?`<p class="empty">Pages needs a <b>public</b> repo on a free account. Make it public with <code>gh repo edit --visibility public --accept-visibility-change-consequences</code></p>`:(g.branches.main?`<p class="empty">Settings → Pages → Deploy from a branch → <b>main</b> → <b>/ (root)</b></p><button class="btn primary" type="button" id="pgon">Turn on GitHub Pages</button>`:'<p class="empty">Push to main first.</p>');}
+  else{const T=tr(S,g.pages.deployed);h+=`<p class="empty"><span class="st ok">Live</span> ${esc(pagesUrl(S))} · showing <code>${g.pages.deployed}</code></p><button class="btn" type="button" id="pgview">Preview live site</button>${T['index.html']===undefined?'<p class="empty"><span class="st bad">404</span> No index.html at the top of the repo.</p>':''}<div id="pgframe"></div>`;}
   const secret=Object.values(g.branches).some(id=>[...ancestors(S,id)].some(x=>Object.entries(S.objs[x].tree).some(([f,v])=>/sk_live_[A-Za-z0-9]+/.test(v))));
   h+=`<h4>Secret scan</h4><p class="empty">${secret?'<span class="st bad">Secret found in history</span> Revoke that key.':'<span class="st ok">No secrets found</span>'}</p>`;
   return h;}
